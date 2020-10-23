@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
+    [HideInInspector]
+    public Vector2Int point;
+
+    public TileData tileData;
     [SerializeField]
-    private TileData tileData;
+    private Generation gen;
 
     public TileData GetTileData ()
     {
@@ -18,7 +22,8 @@ public class Tile : MonoBehaviour
             return;
 
         tileData = _tileData;
-        UpdateSprite(tileData.sprite);
+        Sprite sprite = tileData.sprite;
+        UpdateSprite(sprite);
     }
 
     private void UpdateSprite (Sprite sprite)

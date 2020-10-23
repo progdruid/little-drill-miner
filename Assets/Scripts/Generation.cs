@@ -7,38 +7,46 @@ public class Generation : MonoBehaviour
     //inspector only
     [SerializeField] private LayerData layer;
     [SerializeField] private GameObject Parent;
-    [SerializeField] private GameObject EmptyGameObject;
-    [SerializeField] private Transform minTransform;
-    [SerializeField] private Transform maxTransform;
-    [SerializeField] private int seed; //temp
+    [SerializeField] private GameObject EmptyTile;
+    [SerializeField] private Transform minPos;
+    [SerializeField] private Transform maxPos;
+
+    [SerializeField] private int Seed; //temp
+
 
     //non-inspector public fields (used in other classes)
+    [HideInInspector] public Vector2Int minPoint;
+    [HideInInspector] public Vector2Int maxPoint;
+
+
+    //private fields
     public Tile[,] tileMatrix;
-    public TPoint minPoint;
-    public TPoint maxPoint;
+
 
     //initializing nesesary components
     private void Init () 
     {
-        minPoint = TPoint.Parse(minTransform.position);
-        maxPoint = TPoint.Parse(maxTransform.position);
+        minPoint = Vector2Int.RoundToInt(minPos.position);
+        maxPoint = Vector2Int.RoundToInt(maxPos.position);
         tileMatrix = new Tile[maxPoint.x, maxPoint.y];
     }
 
     //temp
     private void Start()
     {
-        Generate(seed);
+        Generate(Seed);
     }
 
     //map generation
     public void Generate (int _seed)
     {
-        seed = _seed;
+        //temporary nonsense
+        Seed = _seed;
+
         Init();
 
         CreateMapCore();
-        GenerateGeos();
+        GenerateGeos(Seed);
     }
 
     //creation core of the map: tile matrix and bg
@@ -47,49 +55,41 @@ public class Generation : MonoBehaviour
         for (int x = minPoint.x; x < maxPoint.x; x++)
             for (int y = minPoint.y; y < maxPoint.y; y++) 
             {
-                InstantiateCell(x, y);
-                GenBack(layer.BackSprite, x, y);
+                Vector2Int point = new Vector2Int(x, y);
+                
+                CreateTile(point);
+                CreateBack(layer.BackSprite, point);
             }
     }
 
-    //instantiate a cell of tileMatrix
-    private void InstantiateCell (int x, int y) 
+    //instantiate a tile in tileMatrix
+    private void CreateTile (Vector2Int point) 
     {
-        GameObject go = Instantiate(EmptyGameObject, new Vector2(x, y), Quaternion.identity);
-        Tile temp = (Tile)go.AddComponent(typeof(Tile));
+        GameObject go = Instantiate(EmptyTile, (Vector2)point, Quaternion.identity);
         go.transform.SetParent(Parent.transform);
-        tileMatrix[x, y] = temp;
+
+        Tile tile = (Tile)go.AddComponent(typeof(Tile));
+        tile.point = point;
+        
+        tileMatrix[point.x, point.y] = tile;
     }
 
     //bg tile generation
-    void GenBack (Sprite backSprite, int x, int y)
+    void CreateBack (Sprite backSprite, Vector2Int point)
     {
-        GameObject back = Instantiate(EmptyGameObject, new Vector3(x, y, 1), Quaternion.identity);
+        GameObject back = Instantiate(EmptyTile, new Vector3(point.x, point.y, 1), Quaternion.identity);
         back.GetComponent<SpriteRenderer>().sprite = backSprite;
+        
         back.transform.SetParent(Parent.transform);
     }
 
     //generation of geos
-    private void GenerateGeos ()
+    private void GenerateGeos (int _seed)
     {
-        int _seed = seed;
-        foreach (IGeoGen geo in layer.geos)
+        foreach (Geo geo in layer.geos)
         {
-            TileData[,] _tileMatrix = new TileData[maxPoint.x, maxPoint.y];
-            _tileMatrix = geo.GenGeo(this, _seed);
-            PlaceGeo(_tileMatrix); //place geo
+            geo.Generate(this, maxPoint.x, maxPoint.y, _seed);
             _seed++;
         }
-    }
-
-    //placing geo
-    private void PlaceGeo (TileData[,] _tileMatrix) 
-    {
-        for (int x = minPoint.x; x < maxPoint.x; x++)
-            for (int y = minPoint.y; y < maxPoint.y; y++)
-            {
-                TileData tile = _tileMatrix[x, y];
-                tileMatrix[x, y].SetTileData(tile);
-            }
     }
 }

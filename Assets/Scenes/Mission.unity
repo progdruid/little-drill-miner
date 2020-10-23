@@ -167,7 +167,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 32.26234
+  orthographic size: 64.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -191,7 +191,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64, y: 31.4, z: -10}
+  m_LocalPosition: {x: 128, y: 63.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 844072660}
   m_Layer: 0
-  m_Name: maxVector
+  m_Name: maxPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,7 +237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1012651603}
   m_Layer: 0
-  m_Name: minVector
+  m_Name: minPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,7 +332,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 11400000, guid: 803615cbc3c8b2d4b9d3aad609701f4d, type: 2}
   Parent: {fileID: 1455931277}
-  EmptyGameObject: {fileID: 5118778417550507068, guid: 12f58679da960864a8dbba5b7bd5d115, type: 3}
-  minTransform: {fileID: 1012651603}
-  maxTransform: {fileID: 844072660}
-  seed: 75
+  EmptyTile: {fileID: 5118778417550507068, guid: 12f58679da960864a8dbba5b7bd5d115, type: 3}
+  minPos: {fileID: 1012651603}
+  maxPos: {fileID: 844072660}
+  Seed: 100
+  minPoint: {x: 0, y: 0}
+  maxPoint: {x: 0, y: 0}

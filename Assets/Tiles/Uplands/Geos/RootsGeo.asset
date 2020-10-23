@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a64128c752a9844a3f42ab699285b4, type: 3}
+  m_Name: RootsGeo
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: bc576053c2b773b47944054b316ab296, type: 2}
+  CellCount: 7
+  Thickness: 2.2
+  VectorDist: 12
+  MaxAngle: 25
+  RootAngle: 290
+  BranchAngle: 55
+  Move: 1

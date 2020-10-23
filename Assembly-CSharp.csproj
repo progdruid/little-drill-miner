@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1CFC92A3-67A2-9EFA-670A-B0E407D7326B}</ProjectGuid>
+    <ProjectGuid>{4609F023-FE15-328D-B1A5-E76632C0EB17}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,17 +55,18 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\GeoGens\OreGeoGen.cs" />
-    <Compile Include="Assets\Scripts\GeoGens\CaveGG.cs" />
+    <Compile Include="Assets\Scripts\GeoGens\OreGeo.cs" />
+    <Compile Include="Assets\Scripts\GeoGens\CaveGeo.cs" />
     <Compile Include="Assets\Scripts\Algorithms.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\TileData.cs" />
     <Compile Include="Assets\Scripts\LayerData.cs" />
     <Compile Include="Assets\Scripts\Generation.cs" />
     <Compile Include="Assets\Scripts\GeoGens\RootsGG.cs" />
-    <Compile Include="Assets\Scripts\GeoGens\IGeoGen.cs" />
-    <Compile Include="Assets\Scripts\GeoGens\MainGG.cs" />
+    <Compile Include="Assets\Scripts\GeoGens\Geo.cs" />
+    <Compile Include="Assets\Scripts\GeoGens\MainGeo.cs" />
     <Compile Include="Assets\Scripts\TPoint.cs" />
+    <Compile Include="Assets\Scripts\TRandom.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

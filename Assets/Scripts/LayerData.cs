@@ -11,5 +11,5 @@ public class LayerData : ScriptableObject
     public TileData MainTile;
     public Sprite BackSprite;
 
-    public List<IGeoGen> geos;
+    public List<Geo> geos;
 }

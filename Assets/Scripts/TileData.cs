@@ -6,9 +6,11 @@ using UnityEngine;
 public class TileData : ScriptableObject
 {
     public string tilename;
+
+    public TileData[] dissonantTiles;
+
+    [Space]
+
     public Sprite sprite;
 
-    public double cost;
-    public double mass;
-    public double difficulty;
 }
