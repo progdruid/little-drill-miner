@@ -14,17 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilename: Void
   dissonantTiles: []
-  sprite: {fileID: 0}
-  USprite: {fileID: 0}
-  DSprite: {fileID: 0}
-  RSprite: {fileID: 0}
-  LSprite: {fileID: 0}
-  URSprite: {fileID: 0}
-  RDSprite: {fileID: 0}
-  DLSprite: {fileID: 0}
-  LUSprite: {fileID: 0}
-  URDSprite: {fileID: 0}
-  RDLSprite: {fileID: 0}
-  DLUSprite: {fileID: 0}
-  LURSprite: {fileID: 0}
-  URDLSprite: {fileID: 0}
+  texture: {fileID: 0}
+  tileset:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

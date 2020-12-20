@@ -13,7 +13,22 @@ MonoBehaviour:
   m_Name: RootTile
   m_EditorClassIdentifier: 
   tilename: Root
-  sprite: {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
-  cost: 0.5
-  mass: 1
-  difficulty: 7
+  dissonantTiles: []
+  texture: {fileID: 0}
+  tileset:
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
+  - {fileID: -4341532905915216795, guid: c36fadf3f1346a04fadd86074b202951, type: 3}

@@ -13,7 +13,22 @@ MonoBehaviour:
   m_Name: Copper
   m_EditorClassIdentifier: 
   tilename: Copper
-  sprite: {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  cost: 5
-  mass: 2.5
-  difficulty: 2
+  dissonantTiles: []
+  texture: {fileID: 0}
+  tileset:
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}

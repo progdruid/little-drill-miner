@@ -13,7 +13,6 @@ public class Generation : MonoBehaviour
 
     [SerializeField] private int Seed; //temp
 
-
     //non-inspector public fields (used in other classes)
     [HideInInspector] public Vector2Int minPoint;
     [HideInInspector] public Vector2Int maxPoint;
@@ -21,15 +20,6 @@ public class Generation : MonoBehaviour
 
     //private fields
     public Tile[,] tileMatrix;
-
-
-    //initializing nesesary components
-    private void Init () 
-    {
-        minPoint = Vector2Int.RoundToInt(minPos.position);
-        maxPoint = Vector2Int.RoundToInt(maxPos.position);
-        tileMatrix = new Tile[maxPoint.x, maxPoint.y];
-    }
 
     //temp
     private void Start()
@@ -49,6 +39,14 @@ public class Generation : MonoBehaviour
         GenerateGeos(Seed);
     }
 
+    //initializing nesesary components
+    private void Init()
+    {
+        minPoint = Vector2Int.RoundToInt(minPos.position);
+        maxPoint = Vector2Int.RoundToInt(maxPos.position);
+        tileMatrix = new Tile[maxPoint.x, maxPoint.y];
+    }
+
     //creation core of the map: tile matrix and bg
     private void CreateMapCore () 
     {
@@ -59,6 +57,14 @@ public class Generation : MonoBehaviour
                 
                 CreateTile(point);
                 CreateBack(layer.BackSprite, point);
+            }
+        for (int x = minPoint.x; x < maxPoint.x; x++)
+            for (int y = minPoint.y; y < maxPoint.y; y++)
+            {
+                try { tileMatrix[x, y].upTile = tileMatrix[x, y + 1]; } catch { tileMatrix[x, y].upTile = new Tile(null); }
+                try { tileMatrix[x, y].rightTile = tileMatrix[x + 1, y]; } catch { tileMatrix[x, y].rightTile = new Tile(null); }
+                try { tileMatrix[x, y].downTile = tileMatrix[x, y - 1]; } catch { tileMatrix[x, y].downTile = new Tile(null); }
+                try { tileMatrix[x, y].leftTile = tileMatrix[x - 1, y]; } catch { tileMatrix[x, y].leftTile = new Tile(null); }
             }
     }
 
