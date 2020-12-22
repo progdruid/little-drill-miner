@@ -14,21 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilename: Copper
   dissonantTiles: []
-  texture: {fileID: 0}
+  texture: {fileID: 2800000, guid: 28b143c2386fe374f9e4c57df4978f89, type: 3}
+  Slicing: 1
   tileset:
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
-  - {fileID: 7450974632960161984, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

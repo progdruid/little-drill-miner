@@ -9,7 +9,7 @@ public class TileData : ScriptableObject
     public TileData[] dissonantTiles;
     public Texture2D texture;
 
-    private const int bor = 16;
+    public bool Slicing;
     
     public Sprite[] tileset;
     // 0 - main sprite - 0000
@@ -34,45 +34,51 @@ public class TileData : ScriptableObject
     //
     // 15 - all - 1111
     
-    /*
+    
     public void OnValidate()
     {
-        if (texture.width <= bor && texture.height <= bor)
+        if (texture == null)
+            return;
+
+        tileset = new Sprite[16];
+        if (!Slicing)
         {
             Rect rect = new Rect(0, 0, texture.width, texture.height);
-            Sprite sprite = Sprite.Create(texture, rect, new Vector2(0, 0));
+            Sprite sprite = Sprite.Create(texture, rect, new Vector2(0.5f, 0.5f), texture.width);
             for (int i = 0; i < tileset.Length; i++)
                 tileset[i] = sprite;
             return;
         }
-
-        tileset = new Sprite[16];
-        tileset[0] = Parse(texture, 1 * bor, 1 * bor, bor, bor);
-        tileset[1] = Parse(texture, 1 * bor, 2 * bor, bor, bor);
-        tileset[2] = Parse(texture, 0 * bor, 1 * bor, bor, bor);
-        tileset[3] = Parse(texture, 0 * bor, 2 * bor, bor, bor);
-        tileset[4] = Parse(texture, 1 * bor, 0 * bor, bor, bor);
-        tileset[5] = Parse(texture, 1 * bor, 3 * bor, bor, bor);
-        tileset[6] = Parse(texture, 0 * bor, 0 * bor, bor, bor);
-        tileset[7] = Parse(texture, 0 * bor, 3 * bor, bor, bor);
-        tileset[8] = Parse(texture, 2 * bor, 1 * bor, bor, bor);
-        tileset[9] = Parse(texture, 2 * bor, 2 * bor, bor, bor);
-        tileset[10] = Parse(texture, 3 * bor, 1 * bor, bor, bor);
-        tileset[11] = Parse(texture, 3 * bor, 2 * bor, bor, bor);
-        tileset[12] = Parse(texture, 2 * bor, 0 * bor, bor, bor);
-        tileset[13] = Parse(texture, 2 * bor, 3 * bor, bor, bor);
-        tileset[14] = Parse(texture, 3 * bor, 0 * bor, bor, bor);
-        tileset[15] = Parse(texture, 3 * bor, 3 * bor, bor, bor);
+        int bor = texture.width / 4;
+        
+        tileset[0] = Parse(texture, 1 * bor, 1 * bor, bor);
+        tileset[1] = Parse(texture, 1 * bor, 2 * bor, bor);
+        tileset[2] = Parse(texture, 2 * bor, 1 * bor, bor);
+        tileset[3] = Parse(texture, 2 * bor, 2 * bor, bor);
+        tileset[4] = Parse(texture, 1 * bor, 0 * bor, bor);
+        tileset[5] = Parse(texture, 1 * bor, 3 * bor, bor);
+        tileset[6] = Parse(texture, 2 * bor, 0 * bor, bor);
+        tileset[7] = Parse(texture, 2 * bor, 3 * bor, bor);
+        tileset[8] = Parse(texture, 0 * bor, 1 * bor, bor);
+        tileset[9] = Parse(texture, 0 * bor, 2 * bor, bor);
+        tileset[10] = Parse(texture, 3 * bor, 1 * bor, bor);
+        tileset[11] = Parse(texture, 3 * bor, 2 * bor, bor);
+        tileset[12] = Parse(texture, 0 * bor, 0 * bor, bor);
+        tileset[13] = Parse(texture, 0 * bor, 3 * bor, bor);
+        tileset[14] = Parse(texture, 3 * bor, 0 * bor, bor);
+        tileset[15] = Parse(texture, 3 * bor, 3 * bor, bor);
     }
-    */
-    private Sprite Parse (Texture2D texture, int x, int y, int width, int height)
+    
+    private Sprite Parse (Texture2D texture, int x, int y, int side)
     {
-        Color[] colorArr = texture.GetPixels(x, y, width, height);
-        Texture2D newTexture = new Texture2D(width, height);
+        Color[] colorArr = texture.GetPixels(x, y, side, side);
+        Texture2D newTexture = new Texture2D(side, side);
+        newTexture.filterMode = FilterMode.Point;
         newTexture.SetPixels(colorArr);
-        Rect rect = new Rect(0, 0, width, height);
-        Vector2 vector = new Vector2(0, 0);
-        Sprite sprite = Sprite.Create(newTexture, rect, vector);
+        newTexture.Apply();
+        Rect rect = new Rect(0, 0, side, side);
+        Vector2 vector = new Vector2(0.5f, 0.5f);
+        Sprite sprite = Sprite.Create(newTexture, rect, vector, side);
         return sprite;
     }
 }

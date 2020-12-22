@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Uplands
   m_EditorClassIdentifier: 
   Name: Uplands
-  MainTile: {fileID: 11400000, guid: 40be554c10a46ac4696f8544d622d02f, type: 2}
-  BackSprite: {fileID: -5305465309181757921, guid: aa9a2d45ad4d4fc49a7324c7162eb848, type: 3}
+  BackSprite: {fileID: -2626099937754681950, guid: e01e322693af73344a1c01224a0f9778, type: 3}
   geos:
   - {fileID: 11400000, guid: ed4d5e60e47dd8b4fac8f0dc412456c9, type: 2}
   - {fileID: 11400000, guid: f6d47d1c72c191744b66248af8fc3ba6, type: 2}

@@ -15,6 +15,7 @@ MonoBehaviour:
   tilename: Void
   dissonantTiles: []
   texture: {fileID: 0}
+  Slicing: 0
   tileset:
   - {fileID: 0}
   - {fileID: 0}

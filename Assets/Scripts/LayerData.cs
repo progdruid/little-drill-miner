@@ -8,7 +8,6 @@ public class LayerData : ScriptableObject
 {
     public string Name;
 
-    public TileData MainTile;
     public Sprite BackSprite;
 
     public List<Geo> geos;
