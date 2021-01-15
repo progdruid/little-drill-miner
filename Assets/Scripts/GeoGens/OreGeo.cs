@@ -13,8 +13,13 @@ public class OreGeo : Geo
     public float xMult;
     public float yMult;
 
-    public override void Generate(Generation gen, int width, int height, int seed)
+    private int width, height, seed;
+
+    public override void Generate(Generation gen, params object[] _params)
     {
+        width = (int)_params[0];
+        height = (int)_params[1];
+        seed = (int)_params[2];
 
         for (int x = 0; x < width; x++)
             for (int y = 0; y < height; y++)

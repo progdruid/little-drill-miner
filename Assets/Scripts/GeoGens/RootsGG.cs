@@ -8,6 +8,7 @@ public class RootsGG : Geo
     Generation gen;
     int Width;
     int Height;
+    int seed;
     System.Random random;
 
     public TileData tile;
@@ -19,19 +20,21 @@ public class RootsGG : Geo
     public float BranchAngle;
     public float Move;
 
-    public override void Generate(Generation generation, int width, int height, int seed)
+
+    public override void Generate(Generation generation, params object[] _params)
     {
         //init
         gen = generation;
-        Width = width;
-        Height = height;
-        random = new System.Random(seed);
+        Width = (int)_params[0];
+        Height = (int)_params[1];
+        seed = (int)_params[2];
+        random = new System.Random((int)_params[2]);
 
         //gen
         int leftBound = (int)VectorDist;
         int rightBound = (int)(Width - 1 - VectorDist);
 
-        Vector2Int point = new Vector2Int(random.Next(leftBound, rightBound), Height - 1);
+        Vector2Int point = new Vector2Int(Algorithms.Rand(leftBound, rightBound, seed), Height - 1);
 
         GenRoot(point, RootAngle, CellCount);
     }
@@ -73,7 +76,7 @@ public class RootsGG : Geo
             return;
 
         //1000 / 1000, cos it must be random float multiplier
-        float addAngle = MaxAngle * random.Next(-1000, 1000) / 1000;
+        float addAngle = MaxAngle * Algorithms.Rand(-1000, 1000, seed) / 1000;
         float curAngle = angleBase + addAngle;
         float mult = generation * 1f / CellCount;
 
@@ -92,7 +95,7 @@ public class RootsGG : Geo
 
 
         //branch root
-        float randomCoin = random.Next(0, 2);
+        float randomCoin = Algorithms.Rand(0, 2, seed);
         float branchAngle = (randomCoin == 0 ? 1 : -1) * BranchAngle;
 
         GenRoot(points[points.Count - 1], curAngle + branchAngle, generation - 2);

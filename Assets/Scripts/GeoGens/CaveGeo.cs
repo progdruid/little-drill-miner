@@ -12,8 +12,15 @@ public class CaveGeo : Geo
     public int automataIters;
     public int rule;
 
-    public override void Generate(Generation generation, int width, int height, int seed)
+    private int width, height, seed;
+
+
+    public override void Generate(Generation generation, params object[] _params)
     {
+        width = (int)_params[0];
+        height = (int)_params[1];
+        seed = (int)_params[2];
+
         //gen
         bool[,] automata = new bool[width, height];
         CreateRandomPoints(automata, width, height, seed);

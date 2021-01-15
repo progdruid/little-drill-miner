@@ -1,10 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Profiling;
 using UnityEngine;
 
 public class Algorithms
 {
+    private static int randCount;
+
+    public static int Rand(int min, int max, int seed)
+    {
+        randCount++;
+        seed *= randCount;
+        System.Random random = new System.Random(seed);
+        return random.Next(min, max);
+    }
+
     public static int Mod (int num, int divider)
     {
         return (num % divider + divider) % divider;

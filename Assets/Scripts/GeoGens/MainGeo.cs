@@ -7,11 +7,15 @@ public class MainGeo : Geo
 {
     public TileData MainTile;
 
-    public override void Generate(Generation gen, int width, int height, int seed)
-    {
+    private int width, height;
 
-        for (int x = 0; x < gen.maxPoint.x; x++)
-            for (int y = 0; y < gen.maxPoint.y; y++)
+    public override void Generate(Generation gen, params object[] _params)
+    {
+        width = (int)_params[0];
+        height = (int)_params[1];
+
+        for (int x = 0; x < width; x++)
+            for (int y = 0; y < height; y++)
             {
                 gen.tileMatrix[x, y].SetTileData(MainTile);
             }
