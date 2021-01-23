@@ -64,9 +64,10 @@
     <Compile Include="Assets\Scripts\TRandom.cs" />
     <Compile Include="Assets\Scripts\Generation.cs" />
     <Compile Include="Assets\Scripts\GeoGens\RootsGG.cs" />
+    <Compile Include="Assets\Scripts\GeoGens\SpawnArea.cs" />
     <Compile Include="Assets\Scripts\GeoGens\Geo.cs" />
     <Compile Include="Assets\Scripts\GeoGens\MainGeo.cs" />
-    <Compile Include="Assets\Scripts\GeoGens\SpawnArea.cs" />
+    <Compile Include="Assets\Scripts\GeoGens\Sum.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
