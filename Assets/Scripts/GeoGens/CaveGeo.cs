@@ -17,9 +17,10 @@ public class CaveGeo : Geo
 
     public override void Generate(Generation generation, params object[] _params)
     {
-        width = (int)_params[0];
-        height = (int)_params[1];
-        seed = (int)_params[2];
+        seed = (int)_params[0];
+        width = (int)_params[1];
+        height = (int)_params[2];
+
 
         //gen
         bool[,] automata = new bool[width, height];

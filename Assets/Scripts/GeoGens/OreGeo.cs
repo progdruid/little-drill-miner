@@ -17,9 +17,9 @@ public class OreGeo : Geo
 
     public override void Generate(Generation gen, params object[] _params)
     {
-        width = (int)_params[0];
-        height = (int)_params[1];
-        seed = (int)_params[2];
+        seed = (int)_params[0];
+        width = (int)_params[1];
+        height = (int)_params[2];
 
         for (int x = 0; x < width; x++)
             for (int y = 0; y < height; y++)

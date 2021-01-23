@@ -335,6 +335,6 @@ MonoBehaviour:
   EmptyTile: {fileID: 5118778417550507068, guid: 12f58679da960864a8dbba5b7bd5d115, type: 3}
   minPos: {fileID: 1012651603}
   maxPos: {fileID: 844072660}
-  Seed: 101
+  Seed: 102
   minPoint: {x: 0, y: 0}
   maxPoint: {x: 0, y: 0}

@@ -6,35 +6,37 @@ using UnityEngine;
 public class RootsGG : Geo
 {
     Generation gen;
-    int Width;
-    int Height;
-    int seed;
+    int Width, Height, seed, x;
     System.Random random;
 
     public TileData tile;
+    [Space]
+    [Tooltip(tooltip: "Number of generations")]
     public int CellCount;
     public float Thickness;
+    [Tooltip(tooltip: "Width of the first generation cell")]
     public float VectorDist;
-    public float MaxAngle;
+    [Tooltip(tooltip: "Detail (difference between two circle points)")]
+    public float deltaDist;
+    [Space]
     public float RootAngle;
+    [Tooltip(tooltip: "Max difference between angles of two cells")]
+    public float MaxAngle;
+    [Tooltip(tooltip: "Max difference between")]
     public float BranchAngle;
-    public float Move;
 
 
     public override void Generate(Generation generation, params object[] _params)
     {
         //init
         gen = generation;
-        Width = (int)_params[0];
-        Height = (int)_params[1];
-        seed = (int)_params[2];
-        random = new System.Random((int)_params[2]);
+        seed = (int)_params[0];
+        Width = (int)_params[1];
+        Height = (int)_params[2];
+        x = (int)_params[3];
 
         //gen
-        int leftBound = (int)VectorDist;
-        int rightBound = (int)(Width - 1 - VectorDist);
-
-        Vector2Int point = new Vector2Int(Algorithms.Rand(leftBound, rightBound, seed), Height - 1);
+        Vector2Int point = new Vector2Int(x, Height - 1);
 
         GenRoot(point, RootAngle, CellCount);
     }
@@ -103,7 +105,7 @@ public class RootsGG : Geo
 
     private void GenPointArr (List<Vector2Int> arr, Vector2Int from, float angle, float dist)
     {
-        for (float idist = 0; idist < dist; idist += Move)
+        for (float idist = 0; idist < dist; idist += deltaDist)
         {
             float x = from.x;
             float y = from.y;

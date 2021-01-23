@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Profiling;
-using UnityEngine;
 
 public class Algorithms
 {
@@ -12,7 +10,8 @@ public class Algorithms
     {
         randCount++;
         seed *= randCount;
-        System.Random random = new System.Random(seed);
+        Random random = new Random(seed);
+        UnityEngine.Debug.Log(random == null);
         return random.Next(min, max);
     }
 
@@ -25,7 +24,7 @@ public class Algorithms
     {
         float fX = x * 0.1f / xMult + seed;
         float fY = y * 0.1f / yMult + seed;
-        float res = Mathf.PerlinNoise(fX, fY);
+        float res = UnityEngine.Mathf.PerlinNoise(fX, fY);
         res *= res * 100;
         return res;
     }

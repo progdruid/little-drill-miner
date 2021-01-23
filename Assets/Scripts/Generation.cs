@@ -94,7 +94,7 @@ public class Generation : MonoBehaviour
     {
         foreach (Geo geo in layer.geos)
         {
-            geo.Generate(this, maxPoint.x, maxPoint.y, _seed);
+            geo.Generate(this, _seed, maxPoint.x, maxPoint.y);
             _seed++;
         }
     }

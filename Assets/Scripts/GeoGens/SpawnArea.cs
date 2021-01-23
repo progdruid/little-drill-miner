@@ -2,12 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "", menuName = "GeoGen/RandomPosGen")]
+[CreateAssetMenu(fileName = "", menuName = "GeoGen/SpawnArea")]
 public class SpawnArea : Geo
 {
-    [Tooltip("The count of spawning geos")]
-    [SerializeField] int count;
-
     [Tooltip("The start point of spawn area in percents")]
     [SerializeField] Vector2Int start;
     [Tooltip("The end point of spawn area in percents")]
@@ -19,20 +16,14 @@ public class SpawnArea : Geo
 
     public override void Generate(Generation generation, params object[] _params)
     {
-        width = (int)_params[0];
-        height = (int)_params[1];
-        seed = (int)_params[2];
+        seed = (int)_params[0];
+        width = (int)_params[1];
+        height = (int)_params[2];
 
-        for (int i = 0; i < count; i++)
-        {
-            
-            int x = Algorithms.Rand(start.x, end.x, seed) / 100 * width;
-            int y = Algorithms.Rand(start.y, end.y, seed) / 100 * height;
+        int x = (int)(Algorithms.Rand(start.x, end.x, seed) / 100f * width);
+        int y = (int)(Algorithms.Rand(start.y, end.y, seed) / 100f * height);
 
-            geo.Generate(generation, x, y);
-        }
-
-
+        geo.Generate(generation, seed, width, height, x, y);
     }
 
 

@@ -16,7 +16,7 @@ MonoBehaviour:
   CellCount: 7
   Thickness: 2.2
   VectorDist: 12
-  MaxAngle: 25
+  deltaDist: 1
   RootAngle: 290
+  MaxAngle: 25
   BranchAngle: 55
-  Move: 1
