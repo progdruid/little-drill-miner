@@ -11,7 +11,6 @@ public class Algorithms
         randCount++;
         seed *= randCount;
         Random random = new Random(seed);
-        UnityEngine.Debug.Log(random == null);
         return random.Next(min, max);
     }
 

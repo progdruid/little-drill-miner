@@ -9,13 +9,12 @@ public class MainGeo : Geo
 
     private int width, height;
 
-    public override void Generate(Generation gen, params object[] _params)
+    public override void Generate(Generation gen, dynamic param)
     {
-        width = (int)_params[1];
-        height = (int)_params[2];
+        (int seed, int width, int height) Config = param;
 
-        for (int x = 0; x < width; x++)
-            for (int y = 0; y < height; y++)
+        for (int x = 0; x < Config.width; x++)
+            for (int y = 0; y < Config.height; y++)
             {
                 gen.tileMatrix[x, y].SetTileData(MainTile);
             }

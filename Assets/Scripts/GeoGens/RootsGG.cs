@@ -6,7 +6,7 @@ using UnityEngine;
 public class RootsGG : Geo
 {
     Generation gen;
-    int Width, Height, seed, x;
+    int width, height, seed, x;
     System.Random random;
 
     public TileData tile;
@@ -26,17 +26,18 @@ public class RootsGG : Geo
     public float BranchAngle;
 
 
-    public override void Generate(Generation generation, params object[] _params)
+    public override void Generate(Generation generation, dynamic param)
     {
         //init
         gen = generation;
-        seed = (int)_params[0];
-        Width = (int)_params[1];
-        Height = (int)_params[2];
-        x = (int)_params[3];
+        (int seed, int width, int height, int x, int y) Config = param;
+        width = Config.width;
+        height = Config.height;
+        seed = Config.seed;
+        x = Config.x;
 
         //gen
-        Vector2Int point = new Vector2Int(x, Height - 1);
+        Vector2Int point = new Vector2Int(x, height - 1);
 
         GenRoot(point, RootAngle, CellCount);
     }
@@ -54,10 +55,10 @@ public class RootsGG : Geo
             //0.5f is for better look, cos floats in generation are always better than integers
             //floats are cool
 
-            int minX = Mathf.Clamp((int)(points[i].x - _thickness + 0.5f), 0, Width);
-            int maxX = Mathf.Clamp((int)(points[i].x + _thickness + 0.5f), 0, Width);
-            int minY = Mathf.Clamp((int)(points[i].y - _thickness + 0.5f), 0, Height);
-            int maxY = Mathf.Clamp((int)(points[i].y + _thickness + 0.5f), 0, Height);
+            int minX = Mathf.Clamp((int)(points[i].x - _thickness + 0.5f), 0, width);
+            int maxX = Mathf.Clamp((int)(points[i].x + _thickness + 0.5f), 0, width);
+            int minY = Mathf.Clamp((int)(points[i].y - _thickness + 0.5f), 0, height);
+            int maxY = Mathf.Clamp((int)(points[i].y + _thickness + 0.5f), 0, height);
             //and I now
             //it is not pretty
             

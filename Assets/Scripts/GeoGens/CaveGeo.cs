@@ -12,25 +12,21 @@ public class CaveGeo : Geo
     public int automataIters;
     public int rule;
 
-    private int width, height, seed;
 
-
-    public override void Generate(Generation generation, params object[] _params)
+    public override void Generate(Generation generation, dynamic param)
     {
-        seed = (int)_params[0];
-        width = (int)_params[1];
-        height = (int)_params[2];
+        (int seed, int width, int height) Config = param;
 
 
         //gen
-        bool[,] automata = new bool[width, height];
-        CreateRandomPoints(automata, width, height, seed);
+        bool[,] automata = new bool[Config.width, Config.height];
+        CreateRandomPoints(automata, Config.width, Config.height, Config.seed);
 
         for (int i = 0; i < automataIters; i++)
-            Algorithms.CellAutomataTurn(ref automata, width, height, ConditionFunc);
+            Algorithms.CellAutomataTurn(ref automata, Config.width, Config.height, ConditionFunc);
 
-        for (int x = 0; x < width; x++)
-            for (int y = 0; y < height; y++)
+        for (int x = 0; x < Config.width; x++)
+            for (int y = 0; y < Config.height; y++)
             {
                 if (automata[x, y])
                     generation.tileMatrix[x, y].SetTileData(tile);

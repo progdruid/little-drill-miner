@@ -8,11 +8,13 @@ public class CountGeo : Geo
     [SerializeField] int count;
     [SerializeField] Geo geo;
 
-    public override void Generate(Generation generation, params object[] _params)
+    public override void Generate(Generation generation, dynamic param)
     {
         for (int i = 0; i < count; i++)
         {
-            geo.Generate(generation, _params);
+            (int seed, int width, int height) Config = param;
+            Config.seed *= (i + 1);
+            geo.Generate(generation, Config);
         }
     }
 }

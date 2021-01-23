@@ -7,11 +7,13 @@ public class Sum : Geo
 {
     [SerializeField] Geo[] geos;
 
-    public override void Generate(Generation generation, params object[] _params)
+    public override void Generate(Generation generation, dynamic param)
     {
         for (int i = 0; i < geos.Length; i++)
         {
-            geos[i].Generate(generation, _params);
+            (int seed, int width, int height) Config = param;
+            Config.seed *= (i + 1);
+            geos[i].Generate(generation, Config);
         }
     }
 }
