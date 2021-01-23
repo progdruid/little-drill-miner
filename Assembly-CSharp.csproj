@@ -66,8 +66,9 @@
     <Compile Include="Assets\Scripts\GeoGens\RootsGG.cs" />
     <Compile Include="Assets\Scripts\GeoGens\SpawnArea.cs" />
     <Compile Include="Assets\Scripts\GeoGens\Geo.cs" />
-    <Compile Include="Assets\Scripts\GeoGens\MainGeo.cs" />
     <Compile Include="Assets\Scripts\GeoGens\Sum.cs" />
+    <Compile Include="Assets\Scripts\GeoGens\MainGeo.cs" />
+    <Compile Include="Assets\Scripts\GeoGens\CountGeo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
