@@ -13,6 +13,13 @@ public class Algorithms
         Random random = new Random(seed);
         return random.Next(min, max);
     }
+    public static float Rand(float min, float max, int seed)
+    {
+        randCount++;
+        seed *= randCount;
+        Random random = new Random(seed);
+        return min + (max - min) * random.Next(0, 100000) / 100000f;
+    }
 
     public static int Mod (int num, int divider)
     {
