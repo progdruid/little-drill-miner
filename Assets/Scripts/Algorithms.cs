@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class Algorithms
 {
@@ -10,15 +10,38 @@ public class Algorithms
     {
         randCount++;
         seed *= randCount;
-        Random random = new Random(seed);
-        return random.Next(min, max);
+        System.Random random = new System.Random(seed);
+        int res = random.Next(min, max);
+        return res;
     }
+
     public static float Rand(float min, float max, int seed)
     {
         randCount++;
         seed *= randCount;
-        Random random = new Random(seed);
+        System.Random random = new System.Random(seed);
         return min + (max - min) * random.Next(0, 100000) / 100000f;
+    }
+
+    public static List<Vector2Int> ChopVector ((Vector2Int, Vector2Int) vector, float deltaDist)
+    {
+        List<Vector2Int> choppedVector = new List<Vector2Int>();
+
+        float dist = Vector2Int.Distance(vector.Item1, vector.Item2);
+        int xDiff = vector.Item2.x - vector.Item1.x;
+        int yDiff = vector.Item2.y - vector.Item1.y;
+        float addX = deltaDist * xDiff / dist;
+        float addY = deltaDist * yDiff / dist;
+
+        choppedVector.Add(vector.Item1);
+        for (int i = 0; i < dist / deltaDist; i++)
+        {
+            Vector2Int newVector = new Vector2Int(vector.Item1.x + (int)(addX * i), vector.Item1.y + (int)(addY * i));
+            choppedVector.Add(newVector);
+        }
+        choppedVector.Add(vector.Item2);
+
+        return choppedVector;
     }
 
     public static int Mod (int num, int divider)

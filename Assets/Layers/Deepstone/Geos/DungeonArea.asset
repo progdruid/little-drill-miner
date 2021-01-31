@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ca97b3224604b4992bb2340a9947f9, type: 3}
   m_Name: DungeonArea
   m_EditorClassIdentifier: 
-  start: {x: 10, y: 10}
-  end: {x: 90, y: 90}
+  start: {x: 40, y: 40}
+  end: {x: 60, y: 60}
   geo: {fileID: 11400000, guid: 89426bfb500e58a43a085bea48efaf17, type: 2}

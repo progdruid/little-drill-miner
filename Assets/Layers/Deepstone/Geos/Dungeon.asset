@@ -16,5 +16,8 @@ MonoBehaviour:
   VoidTile: {fileID: 11400000, guid: 7467772559141a64dbd3102e82a5b2dc, type: 2}
   roomWidth: 16
   roomHeight: 9
-  doorSize: 3
   thickness: 1
+  roomCount: 10
+  distance: 20
+  deltaDist: 1
+  corridorRadius: 2
