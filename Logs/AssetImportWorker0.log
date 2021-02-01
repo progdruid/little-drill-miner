@@ -1,10 +1,10 @@
 Using pre-set license
-Built from 'trunk' branch; Version is '2020.2.0b1 (4ae7c5e87f33) revision 4908997'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.0) 64bit' Language: 'ru' Physical Memory: 8034 MB
+Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home Single Language; OS build 18362.1016; Version 1903; 64bit' Language: 'ru' Physical Memory: 8034 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-D:\MyCode\2020.2.0b1\Editor\Unity.exe
+D:\MyCode\2020.2.2f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,14 +15,14 @@ D:/MyCode/NewLDM/ProjectLDM
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-8087
+8480
 Successfully changed project path to: D:/MyCode/NewLDM/ProjectLDM
 D:/MyCode/NewLDM/ProjectLDM
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 42.61 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 41.96 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2020.2.0b1 (4ae7c5e87f33)
-[Subsystems] Discovering subsystems at path D:/MyCode/2020.2.0b1/Editor/Data/Resources/UnitySubsystems
+Initialize engine version: 2020.2.2f1 (068178b99f32)
+[Subsystems] Discovering subsystems at path D:/MyCode/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path D:/MyCode/NewLDM/ProjectLDM/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
@@ -32,452 +32,99 @@ Direct3D:
     VRAM:     4019 MB
     Driver:   26.21.14.4108
 Initialize mono
-Mono path[0] = 'D:/MyCode/2020.2.0b1/Editor/Data/Managed'
-Mono path[1] = 'D:/MyCode/2020.2.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'D:/MyCode/2020.2.0b1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56904
+Mono path[0] = 'D:/MyCode/2020.2.2f1/Editor/Data/Managed'
+Mono path[1] = 'D:/MyCode/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/MyCode/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56620
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/MyCode/2020.2.0b1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000770 seconds.
+Register platform support module: D:/MyCode/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000813 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 32.31 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 32.64 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.860 seconds
-Registering precompiled user dll's ...
-Registered in 0.051478 seconds.
+- Completed reload, in  0.894 seconds
 Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000677 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 33.44 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 36.22 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.767 seconds
+- Completed reload, in  1.072 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.31 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 1.69 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1780 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 84.6 MB.
-System memory in use after: 84.7 MB.
+Unloading 1788 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.1 MB.
+System memory in use after: 84.2 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2225.
-Total: 1.964000 ms (FindLiveObjects: 0.390000 ms CreateObjectMapping: 0.103800 ms MarkObjects: 1.425800 ms  DeleteObjects: 0.043500 ms)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2235.
+Total: 2.114100 ms (FindLiveObjects: 0.276400 ms CreateObjectMapping: 0.157100 ms MarkObjects: 1.582200 ms  DeleteObjects: 0.097100 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Layers/Deepstone/Geos/StoneOre.asset
-  artifactKey: Guid(4b409210b0dd72749a519f9fdd991ae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Layers/Deepstone/Geos/StoneOre.asset using Guid(4b409210b0dd72749a519f9fdd991ae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1962f0a444466022f9cbc56cac0cbe6') in 0.063415 seconds
-  Import took 0.067583 seconds .
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: D:/MyCode/2020.2.0b1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000694 seconds.
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 42.59 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.877 seconds
-Registering precompiled user dll's ...
-Registered in 0.039310 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.778 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 49.9 MB.
-System memory in use after: 50.0 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2391.
-Total: 1.846800 ms (FindLiveObjects: 0.338700 ms CreateObjectMapping: 0.080100 ms MarkObjects: 1.412300 ms  DeleteObjects: 0.014300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 69.897562 seconds.
   path: Assets/Layers/Deepstone/Geos/StoneMain.asset
   artifactKey: Guid(f690cf55ced412d49b7a309af0790180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Layers/Deepstone/Geos/StoneMain.asset using Guid(f690cf55ced412d49b7a309af0790180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c7192c0f51e306867dafdb7699bb5f5') in 0.019871 seconds
-  Import took 0.025399 seconds .
+Start importing Assets/Layers/Deepstone/Geos/StoneMain.asset using Guid(f690cf55ced412d49b7a309af0790180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5191e4e9127649e084e899b910d01209') in 0.094426 seconds
+  Import took 0.097371 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.876900 seconds.
-  path: Assets/Layers/Deepstone/Geos/StoneMain.asset
-  artifactKey: Guid(f690cf55ced412d49b7a309af0790180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Layers/Deepstone/Geos/StoneMain.asset using Guid(f690cf55ced412d49b7a309af0790180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08576fd55be30ff66eb6e6e9174dd4f4') in 0.029112 seconds
-  Import took 0.033649 seconds .
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: D:/MyCode/2020.2.0b1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000954 seconds.
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 41.65 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.902 seconds
-Registering precompiled user dll's ...
-Registered in 0.048436 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.805 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 50.3 MB.
-System memory in use after: 50.5 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2557.
-Total: 2.066900 ms (FindLiveObjects: 0.402200 ms CreateObjectMapping: 0.186200 ms MarkObjects: 1.462300 ms  DeleteObjects: 0.014900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 45.134276 seconds.
-  path: Assets/Layers/Deepstone/Geos/New Cave Geo.asset
-  artifactKey: Guid(366e2a229c8034843b122ce0c194e43d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Layers/Deepstone/Geos/New Cave Geo.asset using Guid(366e2a229c8034843b122ce0c194e43d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f14e3bd4918d8667b3abd1290c47cab') in 0.011586 seconds
-  Import took 0.014829 seconds .
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: D:/MyCode/2020.2.0b1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001245 seconds.
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 37.71 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.895 seconds
-Registering precompiled user dll's ...
-Registered in 0.041581 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.828 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 50.4 MB.
-System memory in use after: 50.6 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2561.
-Total: 2.236400 ms (FindLiveObjects: 0.486200 ms CreateObjectMapping: 0.096300 ms MarkObjects: 1.637500 ms  DeleteObjects: 0.015400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 91.673436 seconds.
+  Time since last request: 0.000580 seconds.
   path: Assets/Layers/Deepstone/Geos/Cave.asset
   artifactKey: Guid(366e2a229c8034843b122ce0c194e43d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Layers/Deepstone/Geos/Cave.asset using Guid(366e2a229c8034843b122ce0c194e43d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52acbcac7418ed425763ebd125dfd2d0') in 0.012930 seconds
-  Import took 0.016624 seconds .
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: D:/MyCode/2020.2.0b1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001231 seconds.
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 51.24 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.038 seconds
-Registering precompiled user dll's ...
-Registered in 0.039611 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.052 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 50.5 MB.
-System memory in use after: 50.7 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2565.
-Total: 1.903800 ms (FindLiveObjects: 0.359000 ms CreateObjectMapping: 0.081000 ms MarkObjects: 1.449300 ms  DeleteObjects: 0.013700 ms)
+Start importing Assets/Layers/Deepstone/Geos/Cave.asset using Guid(366e2a229c8034843b122ce0c194e43d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f6090330318b52a7b07f3e35aae036b') in 0.008407 seconds
+  Import took 0.011734 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 24.045055 seconds.
-  path: Assets/Layers/Deepstone/DeepstoneSum.asset
-  artifactKey: Guid(0862e7b40183b1b459c16409dbb7d9e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Layers/Deepstone/DeepstoneSum.asset using Guid(0862e7b40183b1b459c16409dbb7d9e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '154b6b9ec2eb6c96bb01da534a0fd346') in 0.048942 seconds
-  Import took 0.053531 seconds .
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: D:/MyCode/2020.2.0b1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000954 seconds.
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 49.82 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.993 seconds
-Registering precompiled user dll's ...
-Registered in 0.040651 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.913 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 51.0 MB.
-System memory in use after: 51.2 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2731.
-Total: 1.879000 ms (FindLiveObjects: 0.369500 ms CreateObjectMapping: 0.097200 ms MarkObjects: 1.398300 ms  DeleteObjects: 0.013200 ms)
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: D:/MyCode/2020.2.0b1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000715 seconds.
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 32.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.046 seconds
-Registering precompiled user dll's ...
-Registered in 0.040178 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.903 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 51.1 MB.
-System memory in use after: 51.3 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2735.
-Total: 2.355600 ms (FindLiveObjects: 0.482900 ms CreateObjectMapping: 0.139200 ms MarkObjects: 1.715800 ms  DeleteObjects: 0.016400 ms)
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: D:/MyCode/2020.2.0b1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000749 seconds.
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 41.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.137 seconds
-Registering precompiled user dll's ...
-Registered in 0.046704 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.996 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 51.2 MB.
-System memory in use after: 51.4 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2739.
-Total: 2.059900 ms (FindLiveObjects: 0.489600 ms CreateObjectMapping: 0.146600 ms MarkObjects: 1.410300 ms  DeleteObjects: 0.012300 ms)
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: D:/MyCode/2020.2.0b1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000711 seconds.
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 32.65 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.077 seconds
-Registering precompiled user dll's ...
-Registered in 0.039816 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.078 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 51.3 MB.
-System memory in use after: 51.5 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2743.
-Total: 2.092200 ms (FindLiveObjects: 0.532200 ms CreateObjectMapping: 0.113300 ms MarkObjects: 1.430000 ms  DeleteObjects: 0.015800 ms)
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: D:/MyCode/2020.2.0b1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000700 seconds.
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 30.56 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.100 seconds
-Registering precompiled user dll's ...
-Registered in 0.053210 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\MyCode\NewLDM\ProjectLDM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.006 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 51.4 MB.
-System memory in use after: 51.6 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2747.
-Total: 2.013900 ms (FindLiveObjects: 0.355300 ms CreateObjectMapping: 0.076200 ms MarkObjects: 1.566600 ms  DeleteObjects: 0.014100 ms)
+  Time since last request: 0.000189 seconds.
+  path: Assets/Layers/Deepstone/Geos/Dungeon.asset
+  artifactKey: Guid(89426bfb500e58a43a085bea48efaf17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Layers/Deepstone/Geos/Dungeon.asset using Guid(89426bfb500e58a43a085bea48efaf17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e455bbde6ebf5c57d41c5c9bd3474f20') in 0.044918 seconds
+  Import took 0.048667 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 110.662407 seconds.
-  path: Assets/Layers/Deepstone/Geos/Cave.asset
-  artifactKey: Guid(366e2a229c8034843b122ce0c194e43d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Layers/Deepstone/Geos/Cave.asset using Guid(366e2a229c8034843b122ce0c194e43d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39a5419c788f30b14db8b848b8c8011e') in 0.008456 seconds
-  Import took 0.011782 seconds .
+  Time since last request: 0.000212 seconds.
+  path: Assets/Layers/Deepstone/Geos/DungeonArea.asset
+  artifactKey: Guid(cc08ed3c8b46a8f4b9773de105c2632d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Layers/Deepstone/Geos/DungeonArea.asset using Guid(cc08ed3c8b46a8f4b9773de105c2632d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4975988bde4459c24206a9c09d2d61f0') in 0.032937 seconds
+  Import took 0.036606 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000730 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.813 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1778 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.8 MB.
+System memory in use after: 85.0 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2723.
+Total: 1.913300 ms (FindLiveObjects: 0.208700 ms CreateObjectMapping: 0.060900 ms MarkObjects: 1.627700 ms  DeleteObjects: 0.015000 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
