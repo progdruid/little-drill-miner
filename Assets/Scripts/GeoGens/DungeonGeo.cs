@@ -43,6 +43,8 @@ public class DungeonGeo : Geo
 
         for (int i = 0; i < corridors.Count; i++)
             DrawCorridor(corridors[i]);
+
+        CutCore();
     }
 
     private void GenDungeonGraph (Vector2Int firstRoom)
@@ -71,6 +73,37 @@ public class DungeonGeo : Geo
         }
     }
 
+    private void CutCore ()
+    {
+        List<(int x, int y)> needCut = new List<(int x, int y)>();
+
+        for (int x = 1; x < Config.width - 1; x++)
+            for (int y = 1; y < Config.height - 1; y++)
+            {
+                int dissonants = 0;
+                
+                for (int _x = x - 1; _x <= x + 1; _x++)
+                    for (int _y = y - 1; _y <= y + 1; _y++)
+                    {
+                        if (_x == x && _y == y)
+                            continue;
+                
+                        if (gen.tileMatrix[_x, _y].GetTileData() != DungeonTile)
+                            dissonants++;
+                    }
+                
+                if (dissonants != 0)
+                    continue;
+
+                needCut.Add((x, y));
+            }
+
+        for (int i = 0; i < needCut.Count; i++)
+            gen.tileMatrix[needCut[i].x, needCut[i].y].SetTileData(VoidTile);
+    }
+
+
+    /*
     private void AddOtherCorridors ()
     {
         for (int i = 0; i < roomCount; i++)
@@ -88,7 +121,7 @@ public class DungeonGeo : Geo
                 }
             }
         }
-    }
+    }*/
 
     private void DrawRoom (Vector2Int point)
     {
