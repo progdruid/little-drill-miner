@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: DeepstoneSum
   m_EditorClassIdentifier: 
   geos:
-  - {fileID: 11400000, guid: eca3d2e9961b14d44aebc5585d0e98c6, type: 2}
+  - {fileID: 11400000, guid: f690cf55ced412d49b7a309af0790180, type: 2}
+  - {fileID: 11400000, guid: 366e2a229c8034843b122ce0c194e43d, type: 2}
   - {fileID: 11400000, guid: cc08ed3c8b46a8f4b9773de105c2632d, type: 2}

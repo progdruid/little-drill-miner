@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Deepstone
   m_EditorClassIdentifier: 
   Name: Deepstone
-  BackSprite: {fileID: -4328679973983643083, guid: 9f537e565d4e1524c8e649abce611c63, type: 3}
+  BackSprite: {fileID: -2626099937754681950, guid: e01e322693af73344a1c01224a0f9778, type: 3}
   geos:
   - {fileID: 11400000, guid: 0862e7b40183b1b459c16409dbb7d9e7, type: 2}

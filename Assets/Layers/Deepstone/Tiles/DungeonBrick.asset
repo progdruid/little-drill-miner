@@ -15,6 +15,8 @@ MonoBehaviour:
   tilename: DungeonBrick
   dissonantTiles:
   - {fileID: 11400000, guid: 7467772559141a64dbd3102e82a5b2dc, type: 2}
+  - {fileID: 11400000, guid: 14684ed68a8928e4c96198efc52338a4, type: 2}
+  - {fileID: 11400000, guid: 40be554c10a46ac4696f8544d622d02f, type: 2}
   texture: {fileID: 2800000, guid: f3c9344ef72acd0419500d230b70c89e, type: 3}
   Slicing: 1
   tileset:
