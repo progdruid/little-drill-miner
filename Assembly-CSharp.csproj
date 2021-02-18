@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\GeoGens\Geo.cs" />
     <Compile Include="Assets\Scripts\GeoGens\Sum.cs" />
     <Compile Include="Assets\Scripts\GeoGens\MainGeo.cs" />
+    <Compile Include="Assets\Scripts\Map.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
