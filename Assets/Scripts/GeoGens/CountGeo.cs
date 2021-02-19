@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DruidLib;
 
 [CreateAssetMenu(fileName = "", menuName = "GeoGen/CountGeo")]
 public class CountGeo : Geo
@@ -8,13 +9,12 @@ public class CountGeo : Geo
     [SerializeField] int count;
     [SerializeField] Geo geo;
 
-    public override void Generate(Map map, dynamic param)
+    public override void Generate(Map map, Dict<string> Params)
     {
         for (int i = 0; i < count; i++)
         {
-            (int seed, int width, int height) Config = param;
-            Config.seed *= (i + 1);
-            geo.Generate(map, Config);
+            Params.SetData("Seed", (int)Params.GetData("Seed") + 1);
+            geo.Generate(map, Params);
         }
     }
 }

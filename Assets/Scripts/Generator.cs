@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DruidLib;
 
 public class Generator : MonoBehaviour
 {
@@ -77,7 +78,9 @@ public class Generator : MonoBehaviour
     {
         foreach (Geo geo in Layer.geos)
         {
-            geo.Generate(map, (seed: seed, width: Width, height: Height));
+            Dict<string> Params = new Dict<string>();
+            Params.Add("Seed", seed);
+            geo.Generate(map, Params);
             seed++;
         }
     } 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DruidLib;
 
 [CreateAssetMenu(fileName = "", menuName = "GeoGen/CaveGG")]
 public class CaveGeo : Geo
@@ -13,21 +14,21 @@ public class CaveGeo : Geo
     public int rule;
 
 
-    public override void Generate(Map map, dynamic param)
+    public override void Generate(Map map, Dict<string> Params)
     {
-        (int seed, int width, int height) Config = param;
+        int seed = (int)Params.GetData("Seed");
 
         TileData[,] layer = new TileData[map.width, map.height];
 
         //gen
-        bool[,] automata = new bool[Config.width, Config.height];
-        CreateRandomPoints(automata, Config.width, Config.height, Config.seed);
+        bool[,] automata = new bool[map.width, map.height];
+        CreateRandomPoints(automata, map.width, map.height, seed);
 
         for (int i = 0; i < automataIters; i++)
-            Algorithms.CellAutomataTurn(ref automata, Config.width, Config.height, ConditionFunc);
+            Algorithms.CellAutomataTurn(ref automata, map.width, map.height, ConditionFunc);
 
-        for (int x = 0; x < Config.width; x++)
-            for (int y = 0; y < Config.height; y++)
+        for (int x = 0; x < map.width; x++)
+            for (int y = 0; y < map.height; y++)
             {
                 if (automata[x, y])
                     layer[x, y] = tile;

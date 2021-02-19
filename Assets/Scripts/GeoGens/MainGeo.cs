@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DruidLib;
 
 [CreateAssetMenu(fileName = "", menuName = "GeoGen/MainGG")]
 public class MainGeo : Geo
 {
     public TileData MainTile;
 
-    public override void Generate(Map map, dynamic param)
+    public override void Generate(Map map, Dict<string> Params)
     {
         TileData[,] layer = new TileData[map.width, map.height];
 

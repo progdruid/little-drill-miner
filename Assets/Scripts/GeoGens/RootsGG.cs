@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using DruidLib;
 
 [CreateAssetMenu(fileName = "", menuName = "GeoGen/RootsGG")]
 public class RootsGG : Geo
 {
-    int width, height, seed, x;
-    System.Random random;
+    int seed, x;
 
     public TileData tile;
     [Space]
@@ -24,25 +24,23 @@ public class RootsGG : Geo
     [Tooltip(tooltip: "Max difference between")]
     public float BranchAngle;
 
-
+    private Map map;
     private TileData[,] layer;
 
-    public override void Generate(Map map, dynamic param)
+    public override void Generate(Map _map, Dict<string> Params)
     {
         //init
-        layer = new TileData[map.width, map.height];
-        (int seed, int width, int height, int x, int y) Config = param;
-        width = Config.width;
-        height = Config.height;
-        seed = Config.seed;
-        x = Config.x;
+        layer = new TileData[_map.width, _map.height];
+        map = _map;
+        seed = (int)Params.GetData("Seed");
+        x = (int)Params.GetData("X");
 
         //gen
-        Vector2Int point = new Vector2Int(x, height - 1);
+        Vector2Int point = new Vector2Int(x, map.height - 1);
 
         GenRoot(point, RootAngle, CellCount);
 
-        map.AddLayer(layer);
+        _map.AddLayer(layer);
     }
 
     private void FillVector (List<Vector2Int> points, float _thickness)
@@ -58,10 +56,10 @@ public class RootsGG : Geo
             //0.5f is for better look, cos floats in generation are always better than integers
             //floats are cool
 
-            int minX = Mathf.Clamp((int)(points[i].x - _thickness + 0.5f), 0, width);
-            int maxX = Mathf.Clamp((int)(points[i].x + _thickness + 0.5f), 0, width);
-            int minY = Mathf.Clamp((int)(points[i].y - _thickness + 0.5f), 0, height);
-            int maxY = Mathf.Clamp((int)(points[i].y + _thickness + 0.5f), 0, height);
+            int minX = Mathf.Clamp((int)(points[i].x - _thickness + 0.5f), 0, map.width);
+            int maxX = Mathf.Clamp((int)(points[i].x + _thickness + 0.5f), 0, map.width);
+            int minY = Mathf.Clamp((int)(points[i].y - _thickness + 0.5f), 0, map.height);
+            int maxY = Mathf.Clamp((int)(points[i].y + _thickness + 0.5f), 0, map.height);
             //and I now
             //it is not pretty
             

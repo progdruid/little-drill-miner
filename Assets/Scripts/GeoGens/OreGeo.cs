@@ -1,9 +1,5 @@
-﻿using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Drawing;
-using UnityEngine;
+﻿using UnityEngine;
+using DruidLib;
 
 [CreateAssetMenu(fileName = "", menuName = "GeoGen/OreGG")]
 public class OreGeo : Geo
@@ -13,10 +9,9 @@ public class OreGeo : Geo
     public float xMult;
     public float yMult;
 
-    public override void Generate(Map map, dynamic param)
+    public override void Generate(Map map, Dict<string> Params)
     {
-        (int seed, int width, int height) Config = param;
-        int seed = param.Item1;
+        int seed = (int)Params.GetData("Seed");
 
         TileData[,] layer = new TileData[map.width, map.height];
 

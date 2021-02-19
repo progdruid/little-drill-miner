@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DruidLib;
 
 [CreateAssetMenu(fileName = "", menuName = "GeoGen/SumGeo")]
 public class Sum : Geo
 {
     [SerializeField] Geo[] geos;
 
-    public override void Generate(Map map, dynamic param)
+    public override void Generate(Map map, Dict<string> Params)
     {
         for (int i = 0; i < geos.Length; i++)
         {
-            (int seed, int width, int height) Config = param;
-            Config.seed *= (i + 1);
-            geos[i].Generate(map, Config);
+            Params.SetData("Seed", (int)Params.GetData("Seed") + 1);
+
+            geos[i].Generate(map, Params);
         }
     }
 }

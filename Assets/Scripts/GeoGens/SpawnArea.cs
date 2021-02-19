@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DruidLib;
 
 [CreateAssetMenu(fileName = "", menuName = "GeoGen/SpawnArea")]
 public class SpawnArea : Geo
@@ -12,14 +13,19 @@ public class SpawnArea : Geo
 
     [SerializeField] Geo geo;
 
-    public override void Generate(Map map, dynamic param)
+    public override void Generate(Map map, Dict<string> Params)
     {
-        (int seed, int width, int height) Config = param;
+        int seed = (int)Params.GetData("Seed");
 
-        int _x = (int)(Algorithms.Rand(start.x, end.x, Config.seed) / 100f * map.width);
-        int _y = (int)(Algorithms.Rand(start.y, end.y, Config.seed) / 100f * map.height);
+        int _x = (int)(Algorithms.Rand(start.x, end.x, seed) / 100f * map.width);
+        int _y = (int)(Algorithms.Rand(start.y, end.y, seed) / 100f * map.height);
 
-        geo.Generate(map, (seed: Config.seed, width: map.width, height: map.height, x: _x, y: _y));
+        Params.Add("X", _x);
+        Params.Add("Y", _y);
+
+        geo.Generate(map, Params);
+
+        Params.Remove("X"); Params.Remove("Y");
     }
 
 

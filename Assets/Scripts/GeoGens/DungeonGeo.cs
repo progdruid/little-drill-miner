@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DruidLib;
 
 [CreateAssetMenu(fileName = "", menuName = "GeoGen/DungeonGeo")]
 public class DungeonGeo : Geo
@@ -14,23 +15,23 @@ public class DungeonGeo : Geo
     [SerializeField] float deltaDist;
     [SerializeField] float corridorRadius;
 
-    private (int seed, int width, int height, int x, int y) Config;
+    private int seed;
     private Map Map;
     private TileData[,] layer;
 
     private List<Vector2Int> rooms;
     private List<(Vector2Int, Vector2Int)> corridors;
 
-    public override void Generate(Map map, dynamic Params)
+    public override void Generate(Map map, Dict<string> Params)
     {
-        Config = Params;
+        seed = (int)Params.GetData("Seed");
         Map = map;
 
         layer = new TileData[map.width, map.height];
         rooms = new List<Vector2Int>();
         corridors = new List<(Vector2Int, Vector2Int)>();
 
-        Vector2Int room = new Vector2Int(Config.x, Config.y);
+        Vector2Int room = new Vector2Int((int)Params.GetData("X"), (int)Params.GetData("Y"));
         rooms.Add(room);
 
         GenDungeonGraph(room);
@@ -38,7 +39,7 @@ public class DungeonGeo : Geo
 
         for (int i = 0; i < roomCount; i++)
         {
-            if (rooms[i].x < 0 || rooms[i].x >= Config.width || rooms[i].y < 0 || rooms[i].y >= Config.height)
+            if (rooms[i].x < 0 || rooms[i].x >= Map.width || rooms[i].y < 0 || rooms[i].y >= Map.height)
                 continue;
             DrawRoom(rooms[i]);
         }
@@ -56,7 +57,7 @@ public class DungeonGeo : Geo
         Vector2Int last = firstRoom;
         for (int i = 0; i < roomCount - 1; i++) //(roomCount - 1), cos we already have the first room
         {
-            int rand = Algorithms.Rand(1, 5, Config.seed);
+            int rand = Algorithms.Rand(1, 5, seed);
             float angle = 2 * Mathf.PI / 4 * rand;
 
             //float angle = Algorithms.Rand(0f, 2 * Mathf.PI, Config.seed);
@@ -81,8 +82,8 @@ public class DungeonGeo : Geo
     {
         List<(int x, int y)> needCut = new List<(int x, int y)>();
 
-        for (int x = 1; x < Config.width - 1; x++)
-            for (int y = 1; y < Config.height - 1; y++)
+        for (int x = 1; x < Map.width - 1; x++)
+            for (int y = 1; y < Map.height - 1; y++)
             {
                 int dissonants = 0;
                 
@@ -109,8 +110,8 @@ public class DungeonGeo : Geo
     private void DrawRoom (Vector2Int point)
     {
         //Creating empty rect of dungeon tile
-        int maxX = Mathf.Clamp(point.x + roomWidth, 0, Config.width);
-        int maxY = Mathf.Clamp(point.y + roomHeight, 0, Config.height);
+        int maxX = Mathf.Clamp(point.x + roomWidth, 0, Map.width);
+        int maxY = Mathf.Clamp(point.y + roomHeight, 0, Map.height);
 
         for (int x = point.x; x < maxX; x++)
             for (int y = point.y; y < maxY; y++)
@@ -128,11 +129,11 @@ public class DungeonGeo : Geo
         {
             Vector2Int point = choppedVector[i];
 
-            int minX = Mathf.Clamp(point.x - (int)corridorRadius, 0, Config.width);
-            int minY = Mathf.Clamp(point.y - (int)corridorRadius, 0, Config.height);
+            int minX = Mathf.Clamp(point.x - (int)corridorRadius, 0, Map.width);
+            int minY = Mathf.Clamp(point.y - (int)corridorRadius, 0, Map.height);
             
-            int maxX = Mathf.Clamp(point.x + (int)corridorRadius, 0, Config.width);
-            int maxY = Mathf.Clamp(point.y + (int)corridorRadius, 0, Config.height);
+            int maxX = Mathf.Clamp(point.x + (int)corridorRadius, 0, Map.width);
+            int maxY = Mathf.Clamp(point.y + (int)corridorRadius, 0, Map.height);
 
             for (int x = minX; x < maxX; x++)
                 for (int y = minY; y < maxY; y++)
