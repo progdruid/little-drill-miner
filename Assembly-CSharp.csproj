@@ -57,8 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GeoGens\OreGeo.cs" />
+    <Compile Include="Assets\Scripts\Map.cs" />
     <Compile Include="Assets\Scripts\GeoGens\CaveGeo.cs" />
     <Compile Include="Assets\Scripts\Algorithms.cs" />
+    <Compile Include="Assets\Scripts\Generator.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\TileData.cs" />
     <Compile Include="Assets\Scripts\LayerData.cs" />
@@ -72,7 +74,6 @@
     <Compile Include="Assets\Scripts\GeoGens\Geo.cs" />
     <Compile Include="Assets\Scripts\GeoGens\Sum.cs" />
     <Compile Include="Assets\Scripts\GeoGens\MainGeo.cs" />
-    <Compile Include="Assets\Scripts\Map.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -5,9 +5,6 @@ using System.Linq;
 
 public class Tile : MonoBehaviour
 {
-    [HideInInspector]
-    public Vector2Int point;
-    
     //can be null
     public Tile upTile;
     public Tile rightTile;

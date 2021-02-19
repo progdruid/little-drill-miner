@@ -75,7 +75,7 @@ public class Generation : MonoBehaviour
         go.transform.SetParent(Parent.transform);
 
         Tile tile = (Tile)go.AddComponent(typeof(Tile));
-        tile.point = point;
+        //tile.point = point;
         
         tileMatrix[point.x, point.y] = tile;
     }
