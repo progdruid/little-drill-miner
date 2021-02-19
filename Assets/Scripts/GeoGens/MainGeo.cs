@@ -7,17 +7,16 @@ public class MainGeo : Geo
 {
     public TileData MainTile;
 
-    private int width, height;
-
-    public override void Generate(Generation gen, dynamic param)
+    public override void Generate(Map map, dynamic param)
     {
-        (int seed, int width, int height) Config = param;
+        TileData[,] layer = new TileData[map.width, map.height];
 
-        for (int x = 0; x < Config.width; x++)
-            for (int y = 0; y < Config.height; y++)
+        for (int x = 0; x < map.width; x++)
+            for (int y = 0; y < map.height; y++)
             {
-                gen.tileMatrix[x, y].SetTileData(MainTile);
+                layer[x, y] = MainTile;
             }
 
+        map.AddLayer(layer);
     }
 }

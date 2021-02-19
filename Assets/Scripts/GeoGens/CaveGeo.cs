@@ -13,10 +13,11 @@ public class CaveGeo : Geo
     public int rule;
 
 
-    public override void Generate(Generation generation, dynamic param)
+    public override void Generate(Map map, dynamic param)
     {
         (int seed, int width, int height) Config = param;
 
+        TileData[,] layer = new TileData[map.width, map.height];
 
         //gen
         bool[,] automata = new bool[Config.width, Config.height];
@@ -29,9 +30,10 @@ public class CaveGeo : Geo
             for (int y = 0; y < Config.height; y++)
             {
                 if (automata[x, y])
-                    generation.tileMatrix[x, y].SetTileData(tile);
+                    layer[x, y] = tile;
             }
 
+        map.AddLayer(layer);
     }
 
     private bool ConditionFunc (int count)

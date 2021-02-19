@@ -15,16 +15,18 @@ public class DungeonGeo : Geo
     [SerializeField] float corridorRadius;
 
     private (int seed, int width, int height, int x, int y) Config;
-    private Generation gen;
+    private Map Map;
+    private TileData[,] layer;
 
     private List<Vector2Int> rooms;
     private List<(Vector2Int, Vector2Int)> corridors;
 
-    public override void Generate(Generation generation, dynamic Params)
+    public override void Generate(Map map, dynamic Params)
     {
         Config = Params;
-        gen = generation;
+        Map = map;
 
+        layer = new TileData[map.width, map.height];
         rooms = new List<Vector2Int>();
         corridors = new List<(Vector2Int, Vector2Int)>();
 
@@ -45,6 +47,8 @@ public class DungeonGeo : Geo
             DrawCorridor(corridors[i]);
 
         CutCore();
+
+        map.AddLayer(layer);
     }
 
     private void GenDungeonGraph (Vector2Int firstRoom)
@@ -88,7 +92,7 @@ public class DungeonGeo : Geo
                         if (_x == x && _y == y)
                             continue;
                 
-                        if (gen.tileMatrix[_x, _y].GetTileData() != DungeonTile)
+                        if (Map.GetTileAt(_x, _y) != DungeonTile)
                             dissonants++;
                     }
                 
@@ -99,29 +103,8 @@ public class DungeonGeo : Geo
             }
 
         for (int i = 0; i < needCut.Count; i++)
-            gen.tileMatrix[needCut[i].x, needCut[i].y].SetTileData(VoidTile);
+            layer[needCut[i].x, needCut[i].y] = VoidTile;
     }
-
-
-    /*
-    private void AddOtherCorridors ()
-    {
-        for (int i = 0; i < roomCount; i++)
-        {
-            for (int j = 0; j < roomCount; j++)
-            {
-                if (i == j)
-                    continue;
-                if (Vector2Int.Distance(rooms[i], rooms[j]) <= distance)
-                {
-                    Vector2Int firstCenter = new Vector2Int(rooms[i].x + roomWidth / 2, rooms[i].y + roomHeight / 2);
-                    Vector2Int secondCenter = new Vector2Int(rooms[j].x + roomWidth / 2, rooms[j].y + roomHeight / 2);
-                    (Vector2Int, Vector2Int) corridor = (firstCenter, secondCenter);
-                    corridors.Add(corridor);
-                }
-            }
-        }
-    }*/
 
     private void DrawRoom (Vector2Int point)
     {
@@ -132,7 +115,7 @@ public class DungeonGeo : Geo
         for (int x = point.x; x < maxX; x++)
             for (int y = point.y; y < maxY; y++)
             {
-                gen.tileMatrix[x, y].SetTileData(DungeonTile);
+                layer[x, y] = DungeonTile;
             }
 
     }
@@ -156,7 +139,7 @@ public class DungeonGeo : Geo
                 {
                     float circleDist = Vector2Int.Distance(point, new Vector2Int(x, y));
                     if (circleDist <= corridorRadius)
-                        gen.tileMatrix[x, y].SetTileData(DungeonTile);
+                        layer[x, y] = DungeonTile;
                 }
         }
 

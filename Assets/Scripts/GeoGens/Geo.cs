@@ -4,6 +4,6 @@ using UnityEngine;
 
 public abstract class Geo : ScriptableObject
 {
-    public abstract void Generate(Generation generation, dynamic Params);
+    public abstract void Generate(Map map, dynamic Params);
 
 }

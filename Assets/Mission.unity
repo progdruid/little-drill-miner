@@ -327,14 +327,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1892543957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74f88beada2a3754a8dcc4b5d5feb875, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c57798155427904abb3317f4de114db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layer: {fileID: 11400000, guid: e78ade61e52759040a484fe9576a1be2, type: 2}
+  Layer: {fileID: 11400000, guid: 803615cbc3c8b2d4b9d3aad609701f4d, type: 2}
   Parent: {fileID: 1455931277}
   EmptyTile: {fileID: 5118778417550507068, guid: 12f58679da960864a8dbba5b7bd5d115, type: 3}
-  minPos: {fileID: 1012651603}
-  maxPos: {fileID: 844072660}
+  Width: 256
+  Height: 128
   Seed: 5
-  minPoint: {x: 0, y: 0}
-  maxPoint: {x: 0, y: 0}

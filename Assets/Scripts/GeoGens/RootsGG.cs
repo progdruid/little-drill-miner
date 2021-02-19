@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "", menuName = "GeoGen/RootsGG")]
 public class RootsGG : Geo
 {
-    Generation gen;
     int width, height, seed, x;
     System.Random random;
 
@@ -26,10 +25,12 @@ public class RootsGG : Geo
     public float BranchAngle;
 
 
-    public override void Generate(Generation generation, dynamic param)
+    private TileData[,] layer;
+
+    public override void Generate(Map map, dynamic param)
     {
         //init
-        gen = generation;
+        layer = new TileData[map.width, map.height];
         (int seed, int width, int height, int x, int y) Config = param;
         width = Config.width;
         height = Config.height;
@@ -40,6 +41,8 @@ public class RootsGG : Geo
         Vector2Int point = new Vector2Int(x, height - 1);
 
         GenRoot(point, RootAngle, CellCount);
+
+        map.AddLayer(layer);
     }
 
     private void FillVector (List<Vector2Int> points, float _thickness)
@@ -67,7 +70,7 @@ public class RootsGG : Geo
                 {
                     float dist = Vector2Int.Distance(new Vector2Int(x, y), points[i]);
                     if (dist <= _thickness)
-                        gen.tileMatrix[x, y].SetTileData(tile);
+                        layer[x, y] = tile;
                 }
         }
     }

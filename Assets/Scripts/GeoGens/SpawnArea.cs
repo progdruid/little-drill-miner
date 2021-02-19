@@ -12,14 +12,14 @@ public class SpawnArea : Geo
 
     [SerializeField] Geo geo;
 
-    public override void Generate(Generation generation, dynamic param)
+    public override void Generate(Map map, dynamic param)
     {
         (int seed, int width, int height) Config = param;
 
-        int _x = (int)(Algorithms.Rand(start.x, end.x, Config.seed) / 100f * Config.width);
-        int _y = (int)(Algorithms.Rand(start.y, end.y, Config.seed) / 100f * Config.height);
+        int _x = (int)(Algorithms.Rand(start.x, end.x, Config.seed) / 100f * map.width);
+        int _y = (int)(Algorithms.Rand(start.y, end.y, Config.seed) / 100f * map.height);
 
-        geo.Generate(generation, (seed: Config.seed, width: Config.width, height: Config.height, x: _x, y: _y));
+        geo.Generate(map, (seed: Config.seed, width: map.width, height: map.height, x: _x, y: _y));
     }
 
 

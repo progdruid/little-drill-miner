@@ -13,17 +13,22 @@ public class OreGeo : Geo
     public float xMult;
     public float yMult;
 
-    public override void Generate(Generation gen, dynamic param)
+    public override void Generate(Map map, dynamic param)
     {
         (int seed, int width, int height) Config = param;
+        int seed = param.Item1;
 
-        for (int x = 0; x < Config.width; x++)
-            for (int y = 0; y < Config.height; y++)
+        TileData[,] layer = new TileData[map.width, map.height];
+
+        for (int x = 0; x < map.width; x++)
+            for (int y = 0; y < map.height; y++)
             {
-                float temp = Algorithms.Perlin(x, y, Config.seed, xMult, yMult);
+                float temp = Algorithms.Perlin(x, y, seed, xMult, yMult);
 
                 if (temp >= Threshold)
-                    gen.tileMatrix[x, y].SetTileData(tile);
+                    layer[x, y] = tile;
             }
+
+        map.AddLayer(layer);
     }
 }

@@ -32,10 +32,14 @@ public class Tile : MonoBehaviour
         Sprite sprite = tileData.tileset[GetConnection()];
         UpdateSprite(sprite);
 
-        upTile.Ping();
-        rightTile.Ping();
-        downTile.Ping();
-        leftTile.Ping();
+        if (upTile != null)
+            upTile.Ping();
+        if (rightTile != null)
+            rightTile.Ping();
+        if (downTile != null)
+            downTile.Ping();
+        if (leftTile != null)
+            leftTile.Ping();
     }
 
     public void Ping ()

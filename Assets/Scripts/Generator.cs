@@ -12,6 +12,8 @@ public class Generator : MonoBehaviour
 
     [SerializeField] private int Seed;
 
+    private Map map;
+
     private void Start()
     {
         Gen(Seed);
@@ -19,7 +21,7 @@ public class Generator : MonoBehaviour
 
     private void Gen (int seed)
     {
-        Map map = new Map(CreateMap(), Width, Height);
+        map = new Map(CreateMap(), Width, Height);
         CreateBack(Layer.BackSprite);
         GenGeos(Seed);
     }
@@ -75,7 +77,7 @@ public class Generator : MonoBehaviour
     {
         foreach (Geo geo in Layer.geos)
         {
-            geo.Generate(this, (seed: seed, width: Width, height: Height));
+            geo.Generate(map, (seed: seed, width: Width, height: Height));
             seed++;
         }
     } 
