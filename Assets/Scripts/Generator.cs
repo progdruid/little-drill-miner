@@ -7,7 +7,6 @@ public class Generator : MonoBehaviour
 {
     [SerializeField] private LayerData Layer;
     [SerializeField] private GameObject Parent;
-    [SerializeField] private GameObject EmptyTile;
 
     [SerializeField] private int Width, Height;
 
@@ -31,11 +30,13 @@ public class Generator : MonoBehaviour
     {
         Tile[,] _tilemap = new Tile[Width, Height];
 
+        GameObject prefab = new GameObject("Tile");
         for (int x = 0; x < Width; x++)
             for (int y = 0; y < Height; y++)
             {
-                GameObject go = Instantiate(EmptyTile, new Vector3(x, y, 0), Quaternion.identity);
+                GameObject go = Instantiate(prefab, new Vector3(x, y, 0), Quaternion.identity);
                 go.transform.SetParent(Parent.transform);
+                go.AddComponent<SpriteRenderer>();
 
                 Tile tile = (Tile)go.AddComponent(typeof(Tile));
                 _tilemap[x, y] = tile;
@@ -64,11 +65,12 @@ public class Generator : MonoBehaviour
 
     private void CreateBack (Sprite backSprite)
     {
+        GameObject prefab = new GameObject("Back");
         for (int x = 0; x < Width; x++)
             for (int y = 0; y < Height; y++)
             {
-                GameObject back = Instantiate(EmptyTile, new Vector3(x, y, 1), Quaternion.identity);
-                back.GetComponent<SpriteRenderer>().sprite = backSprite;
+                GameObject back = Instantiate(prefab, new Vector3(x, y, 1), Quaternion.identity);
+                back.AddComponent<SpriteRenderer>().sprite = backSprite;
 
                 back.transform.SetParent(Parent.transform);
             }

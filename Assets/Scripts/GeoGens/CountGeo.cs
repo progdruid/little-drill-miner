@@ -13,7 +13,6 @@ public class CountGeo : Geo
     {
         for (int i = 0; i < count; i++)
         {
-            Params.SetData("Seed", (int)Params.GetData("Seed") + 1);
             geo.Generate(map, Params);
         }
     }

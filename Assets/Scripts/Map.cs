@@ -8,12 +8,17 @@ public class Map : MonoBehaviour
     public int height { get; private set; }
 
     private Tile[,] tilemap;
+    public List<Struct> structs { get; private set; }
+
+    private GameObject structPrefab;
 
     public Map (Tile[,] _tilemap, int _width, int _height)
     {
         tilemap = _tilemap;
         width = _width;
         height = _height;
+
+        structs = new List<Struct>();
     }
 
     public void AddLayer (TileData[,] layer)
@@ -36,5 +41,19 @@ public class Map : MonoBehaviour
         TileData tile = tilemap[x, y].GetTileData();
 
         return tile;
+    }
+
+    public void CreateStruct (int x, int y, StructData data)
+    {
+        int _x = Mathf.Clamp(x + data.width, 0, width);
+        int _y = Mathf.Clamp(y + data.height, 0, height);
+
+        structPrefab = new GameObject("Struct");
+        GameObject go = Instantiate(structPrefab, new Vector3(_x, _y, -1), Quaternion.identity);
+        go.AddComponent<SpriteRenderer>().sprite = data.sprite;
+
+        Struct str = new Struct(data, go);
+
+        structs.Add(str);
     }
 }

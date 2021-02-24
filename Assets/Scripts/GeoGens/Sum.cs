@@ -12,8 +12,6 @@ public class Sum : Geo
     {
         for (int i = 0; i < geos.Length; i++)
         {
-            Params.SetData("Seed", (int)Params.GetData("Seed") + 1);
-
             geos[i].Generate(map, Params);
         }
     }
