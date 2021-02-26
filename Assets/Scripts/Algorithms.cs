@@ -9,19 +9,14 @@ public class Algorithms
     public static int Rand(int min, int max, int seed)
     {
         randCount++;
-        seed *= randCount;
+        System.Random preRandom = new System.Random(randCount);
+        seed += preRandom.Next(randCount, randCount * 1000);
+
         System.Random random = new System.Random(seed);
         int res = random.Next(min, max);
         return res;
     }
 
-    public static float Rand(float min, float max, int seed)
-    {
-        randCount++;
-        seed *= randCount;
-        System.Random random = new System.Random(seed);
-        return min + (max - min) * random.Next(0, 100000) / 100000f;
-    }
 
     public static List<Vector2Int> ChopVector ((Vector2Int, Vector2Int) vector, float deltaDist)
     {

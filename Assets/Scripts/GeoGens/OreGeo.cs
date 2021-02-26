@@ -12,13 +12,14 @@ public class OreGeo : Geo
     public override void Generate(Map map, Dict<string> Params)
     {
         int seed = (int)Params.GetData("Seed");
+        int perlinSeed = Algorithms.Rand(0, 1000, seed);
 
         TileData[,] layer = new TileData[map.width, map.height];
 
         for (int x = 0; x < map.width; x++)
             for (int y = 0; y < map.height; y++)
             {
-                float temp = Algorithms.Perlin(x, y, seed, xMult, yMult);
+                float temp = Algorithms.Perlin(x, y, perlinSeed, xMult, yMult);
 
                 if (temp >= Threshold)
                     layer[x, y] = tile;
