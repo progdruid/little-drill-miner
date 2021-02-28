@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61cadf8033e36154b88d35b0b520f14a, type: 3}
+  m_Name: AmberMud
+  m_EditorClassIdentifier: 
+  tilename: AmberMud
+  dissonantTiles:
+  - {fileID: 11400000, guid: 40be554c10a46ac4696f8544d622d02f, type: 2}
+  - {fileID: 11400000, guid: 9aa710f3b377ca04db6320237d56383b, type: 2}
+  - {fileID: 11400000, guid: 046ff61c79574d74fa4af271b10d7ff6, type: 2}
+  - {fileID: 11400000, guid: 7467772559141a64dbd3102e82a5b2dc, type: 2}
+  - {fileID: 11400000, guid: bc576053c2b773b47944054b316ab296, type: 2}
+  - {fileID: 11400000, guid: 79d2da5ec24d20741b2b19467bf3df28, type: 2}
+  texture: {fileID: 2800000, guid: cf04cda7e80fc494fb81f76f0cc192da, type: 3}
+  Slicing: 1
+  tileset:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

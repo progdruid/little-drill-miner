@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\GeoGens\Geo.cs" />
     <Compile Include="Assets\Scripts\GeoGens\Sum.cs" />
     <Compile Include="Assets\Scripts\GeoGens\MainGeo.cs" />
+    <Compile Include="Assets\Scripts\GeoGens\AmberGeo.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\DruidLib.dll" />

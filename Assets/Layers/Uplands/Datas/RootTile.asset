@@ -19,6 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9aa710f3b377ca04db6320237d56383b, type: 2}
   - {fileID: 11400000, guid: 046ff61c79574d74fa4af271b10d7ff6, type: 2}
   - {fileID: 11400000, guid: 40be554c10a46ac4696f8544d622d02f, type: 2}
+  - {fileID: 11400000, guid: 5c1f6e10559fd014380b771e9d6c9dfd, type: 2}
   texture: {fileID: 2800000, guid: c36fadf3f1346a04fadd86074b202951, type: 3}
   Slicing: 0
   tileset:
