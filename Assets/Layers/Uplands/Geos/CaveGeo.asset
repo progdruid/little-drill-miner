@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CaveGeo
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 7467772559141a64dbd3102e82a5b2dc, type: 2}
-  threshold: 67
-  automataIters: 5
-  rule: 4
+  threshold: 68
+  automataIters: 20
+  rule: 3

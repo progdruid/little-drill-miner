@@ -24,8 +24,31 @@ public class CaveGeo : Geo
         bool[,] automata = new bool[map.width, map.height];
         CreateRandomPoints(automata, map.width, map.height, seed);
 
+        bool[,] turnTemp = new bool[map.width, map.height];
         for (int i = 0; i < automataIters; i++)
-            Algorithms.CellAutomataTurn(ref automata, map.width, map.height, ConditionFunc);
+        {
+            for (int x = 0; x < map.width; x++)
+                for (int y = 0; y < map.height; y++)
+                {
+                    int count = 0;
+                    for (int _x = x - 1; _x <= x + 1; _x++)
+                        for (int _y = y - 1; _y <= y + 1; _y++)
+                        {
+                            if (_x == x && _y == y)
+                                continue;
+
+                            int modX = Algorithms.Mod(_x, map.width);
+                            int modY = Algorithms.Mod(_y, map.height);
+
+                            if (automata[modX, modY])
+                                count++;
+                        }
+
+                    turnTemp[x, y] = Condition(count, automata[x, y]);
+                }
+
+            automata = turnTemp;
+        }
 
         for (int x = 0; x < map.width; x++)
             for (int y = 0; y < map.height; y++)
@@ -37,9 +60,9 @@ public class CaveGeo : Geo
         map.AddLayer(layer);
     }
 
-    private bool ConditionFunc (int count)
+    private bool Condition (int count, bool self)
     {
-        return count >= rule;
+        return count > rule;
     }
 
     private void CreateRandomPoints (bool[,] matrix, int _width, int _height, int seed)
@@ -49,7 +72,7 @@ public class CaveGeo : Geo
         for (int x = 0; x < _width; x++)
             for (int y = 0; y < _height; y++)
             {
-                double num = random.Next(0, 100000) / 100000f * 100f;
+                double num = Algorithms.Rand(0, 100000, seed) / 100000f * 100f;
                 matrix[x, y] = num >= threshold;
             }
     }
