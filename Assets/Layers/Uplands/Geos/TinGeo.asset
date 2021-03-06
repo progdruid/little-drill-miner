@@ -16,3 +16,4 @@ MonoBehaviour:
   Threshold: 73
   xMult: 1
   yMult: 1
+  seedIndex: 2

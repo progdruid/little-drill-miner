@@ -9,19 +9,22 @@ public class OreGeo : Geo
     public float xMult;
     public float yMult;
 
+    public int seedIndex;
+
     public override void Generate(Map map, Dict<string> Params)
     {
-        int seed = (int)Params.GetData("Seed");
-        int perlinSeed = Algorithms.Rand(0, 1000, seed);
+        int seed = (int)Params.GetData("Seed") + seedIndex;
 
         TileData[,] layer = new TileData[map.width, map.height];
 
         for (int x = 0; x < map.width; x++)
             for (int y = 0; y < map.height; y++)
             {
-                float temp = Algorithms.Perlin(x, y, perlinSeed, xMult, yMult);
+                float perlin = Algorithms.PerlinNoise(x / xMult, y / yMult, seed);
 
-                if (temp >= Threshold)
+                perlin *= perlin * 100;
+
+                if (perlin >= Threshold)
                     layer[x, y] = tile;
             }
 

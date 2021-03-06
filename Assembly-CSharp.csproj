@@ -56,9 +56,9 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\GeoGens\OreGeo.cs" />
+    <Compile Include="Assets\Scripts\Uplands\OreGeo.cs" />
     <Compile Include="Assets\Scripts\Map.cs" />
-    <Compile Include="Assets\Scripts\GeoGens\CaveGeo.cs" />
+    <Compile Include="Assets\Scripts\Uplands\CaveGeo.cs" />
     <Compile Include="Assets\Scripts\Algorithms.cs" />
     <Compile Include="Assets\Scripts\Generator.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
@@ -66,14 +66,14 @@
     <Compile Include="Assets\Scripts\GeoGens\StructGeo.cs" />
     <Compile Include="Assets\Scripts\TileData.cs" />
     <Compile Include="Assets\Scripts\LayerData.cs" />
-    <Compile Include="Assets\Scripts\GeoGens\RootsGG.cs" />
+    <Compile Include="Assets\Scripts\Uplands\RootsGG.cs" />
     <Compile Include="Assets\Scripts\GeoGens\SpawnArea.cs" />
     <Compile Include="Assets\Scripts\Struct.cs" />
     <Compile Include="Assets\Scripts\GeoGens\CountGeo.cs" />
-    <Compile Include="Assets\Scripts\GeoGens\AmberGeo.cs" />
+    <Compile Include="Assets\Scripts\Uplands\AmberGeo.cs" />
     <Compile Include="Assets\Scripts\GeoGens\Geo.cs" />
     <Compile Include="Assets\Scripts\GeoGens\Sum.cs" />
-    <Compile Include="Assets\Scripts\GeoGens\MainGeo.cs" />
+    <Compile Include="Assets\Scripts\Uplands\MainGeo.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\DruidLib.dll" />
