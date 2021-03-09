@@ -78,12 +78,9 @@ public class Generator : MonoBehaviour
 
     private void GenGeos (int seed)
     {
-        foreach (Geo geo in Layer.geos)
-        {
-            Dict<string> Params = new Dict<string>();
-            Params.Add("Seed", seed);
-            geo.Generate(map, Params);
-            seed++;
-        }
+        Dict<string> Params = new Dict<string>();
+        Params.Add("Seed", seed);
+        Layer.EntryGeo.Generate(map, Params);
+        seed++;
     } 
 }

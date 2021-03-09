@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Uplands
   BackSprite: {fileID: -2626099937754681950, guid: e01e322693af73344a1c01224a0f9778, type: 3}
+  EntryGeo: {fileID: 11400000, guid: 4e1e376b2ec08eb4291d529978814142, type: 2}
   geos:
   - {fileID: 11400000, guid: 4e1e376b2ec08eb4291d529978814142, type: 2}

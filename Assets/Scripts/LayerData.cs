@@ -10,5 +10,5 @@ public class LayerData : ScriptableObject
 
     public Sprite BackSprite;
 
-    public List<Geo> geos;
+    public Geo EntryGeo;
 }
