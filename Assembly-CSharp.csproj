@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\GeoGens\Geo.cs" />
     <Compile Include="Assets\Scripts\GeoGens\Sum.cs" />
     <Compile Include="Assets\Scripts\Uplands\MainGeo.cs" />
+    <Compile Include="Assets\Scripts\Paralax.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\DruidLib.dll" />

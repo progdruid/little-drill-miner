@@ -7,6 +7,7 @@ public class Generator : MonoBehaviour
 {
     [SerializeField] private LayerData Layer;
     [SerializeField] private GameObject Parent;
+    [SerializeField] private Camera MainCamera;
 
     [SerializeField] private int Width, Height;
 
@@ -22,7 +23,7 @@ public class Generator : MonoBehaviour
     private void Gen (int seed)
     {
         map = new Map(CreateMap(), Width, Height);
-        CreateBack(Layer.BackSprite);
+        CreateBack();
         GenGeos(Seed);
     }
 
@@ -63,17 +64,23 @@ public class Generator : MonoBehaviour
             }
     }
 
-    private void CreateBack (Sprite backSprite)
+    private void CreateBack ()
     {
-        GameObject prefab = new GameObject("Back");
-        for (int x = 0; x < Width; x++)
-            for (int y = 0; y < Height; y++)
-            {
-                GameObject back = Instantiate(prefab, new Vector3(x, y, 1), Quaternion.identity);
-                back.AddComponent<SpriteRenderer>().sprite = backSprite;
+        Vector3 cameraPos = MainCamera.transform.position;
 
-                back.transform.SetParent(Parent.transform);
-            }
+        for (int i = 0; i < Layer.BGLayersCount; i++)
+        {
+            float z = (cameraPos.z + MainCamera.farClipPlane) * Layer.BGDistances[i];
+            GameObject prefab = new GameObject("BGLayer");
+            GameObject bglayer = Instantiate(prefab, new Vector3(cameraPos.x, cameraPos.y, z), Quaternion.identity);
+            bglayer.transform.localScale = new Vector3(map.width, map.width, 1);
+
+            SpriteRenderer renderer = bglayer.AddComponent<SpriteRenderer>();
+            renderer.sprite = Layer.BGLayers[i];
+            renderer.drawMode = SpriteDrawMode.Tiled;
+            renderer.size = new Vector2(Layer.XRepeating, Layer.YRepeating);
+
+        }
     }
 
     private void GenGeos (int seed)
