@@ -6,10 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "", menuName = "Layer")]
 public class LayerData : ScriptableObject
 {
-    public string Name;
-
-    public Sprite BackSprite;
-
     public int BGLayersCount;
     public Sprite[] BGLayers;
     [Range(-1f, 1f)]
@@ -17,6 +13,8 @@ public class LayerData : ScriptableObject
 
     public float XRepeating;
     public float YRepeating;
+
+    [Space]
 
     public Geo EntryGeo;
 

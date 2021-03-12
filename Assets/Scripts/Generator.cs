@@ -80,6 +80,9 @@ public class Generator : MonoBehaviour
             renderer.drawMode = SpriteDrawMode.Tiled;
             renderer.size = new Vector2(Layer.XRepeating, Layer.YRepeating);
 
+            Paralax paralax = bglayer.AddComponent<Paralax>();
+            paralax.ParalaxFactor = Layer.BGDistances[i];
+            paralax.camera = MainCamera;
         }
     }
 

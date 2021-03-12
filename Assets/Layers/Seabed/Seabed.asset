@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05aabdf3bb594a044ae618e43d90f7b6, type: 3}
+  m_Name: Seabed
+  m_EditorClassIdentifier: 
+  BGLayersCount: 7
+  BGLayers:
+  - {fileID: 21300000, guid: dd64da0c0719e454aab001fc2d76736a, type: 3}
+  - {fileID: 21300000, guid: 1f62f392d4807a9449bd2b4d6157af37, type: 3}
+  - {fileID: 21300000, guid: e8c7ca61ed1f4fc48a8ea833c2db1e7c, type: 3}
+  - {fileID: 21300000, guid: 52cd8771143cb1c48bf2d653a67d9dc6, type: 3}
+  - {fileID: 21300000, guid: 2dd9a99e55adb5b4d97e119722bbec62, type: 3}
+  - {fileID: 21300000, guid: d993ca2b3eee92548948843878f3d627, type: 3}
+  - {fileID: 21300000, guid: 91951c1ada61107468d5d8c126deb19c, type: 3}
+  BGDistances:
+  - -0.4
+  - -0.2
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  - 1
+  XRepeating: 3
+  YRepeating: 0.5625
+  EntryGeo: {fileID: 11400000, guid: e77afe366f4bbfb4da2b7ae4956f8b52, type: 2}
