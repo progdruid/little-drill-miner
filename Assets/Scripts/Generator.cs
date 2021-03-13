@@ -7,7 +7,6 @@ public class Generator : MonoBehaviour
 {
     [SerializeField] private LayerData Layer;
     [SerializeField] private GameObject Parent;
-    [SerializeField] private Camera MainCamera;
 
     [SerializeField] private int Width, Height;
 
@@ -66,11 +65,11 @@ public class Generator : MonoBehaviour
 
     private void CreateBack ()
     {
-        Vector3 cameraPos = MainCamera.transform.position;
+        Vector3 cameraPos = Camera.main.transform.position;
 
         for (int i = 0; i < Layer.BGLayersCount; i++)
         {
-            float z = (cameraPos.z + MainCamera.farClipPlane) * Layer.BGDistances[i];
+            float z = (cameraPos.z + Camera.main.farClipPlane) * Layer.BGDistances[i];
             GameObject prefab = new GameObject("BGLayer");
             GameObject bglayer = Instantiate(prefab, new Vector3(cameraPos.x, cameraPos.y, z), Quaternion.identity);
             bglayer.transform.localScale = new Vector3(map.width, map.width, 1);
@@ -82,7 +81,6 @@ public class Generator : MonoBehaviour
 
             Paralax paralax = bglayer.AddComponent<Paralax>();
             paralax.ParalaxFactor = Layer.BGDistances[i];
-            paralax.camera = MainCamera;
         }
     }
 

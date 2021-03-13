@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05aabdf3bb594a044ae618e43d90f7b6, type: 3}
   m_Name: Seabed
   m_EditorClassIdentifier: 
-  BGLayersCount: 7
+  BGLayersCount: 6
   BGLayers:
-  - {fileID: 21300000, guid: dd64da0c0719e454aab001fc2d76736a, type: 3}
   - {fileID: 21300000, guid: 1f62f392d4807a9449bd2b4d6157af37, type: 3}
   - {fileID: 21300000, guid: e8c7ca61ed1f4fc48a8ea833c2db1e7c, type: 3}
   - {fileID: 21300000, guid: 52cd8771143cb1c48bf2d653a67d9dc6, type: 3}
@@ -22,12 +21,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d993ca2b3eee92548948843878f3d627, type: 3}
   - {fileID: 21300000, guid: 91951c1ada61107468d5d8c126deb19c, type: 3}
   BGDistances:
-  - -0.4
-  - -0.2
-  - 0.2
-  - 0.4
-  - 0.6
-  - 0.8
+  - 0.1666
+  - 0.3333
+  - 0.5
+  - 0.6666
+  - 0.8333
   - 1
   XRepeating: 3
   YRepeating: 0.5625
