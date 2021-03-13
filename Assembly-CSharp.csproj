@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\GeoGens\CoupleGeo.cs" />
     <Compile Include="Assets\Scripts\Struct.cs" />
     <Compile Include="Assets\Scripts\Uplands\AmberGeo.cs" />
+    <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\GeoGens\Geo.cs" />
     <Compile Include="Assets\Scripts\GeoGens\Sum.cs" />
     <Compile Include="Assets\Scripts\Uplands\MainGeo.cs" />

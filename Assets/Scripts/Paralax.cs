@@ -12,7 +12,7 @@ public class Paralax : MonoBehaviour
         startPoint = transform.position;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         float layerZ = transform.position.z;
         float width = transform.localScale.x;
@@ -27,12 +27,12 @@ public class Paralax : MonoBehaviour
 
         if (camdist.x > width)
         {
-            startPoint = Camera.main.transform.position;
+            startPoint = new Vector2(Camera.main.transform.position.x, startPoint.y);
             transform.position = new Vector3(transform.position.x + width, transform.position.y, transform.position.z);
         }
         else if (camdist.x < - width)
         {
-            startPoint = Camera.main.transform.position;
+            startPoint = new Vector2(Camera.main.transform.position.x, startPoint.y);
             transform.position = new Vector3(transform.position.x - width, transform.position.y, transform.position.z);
         }
     }

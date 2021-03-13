@@ -41,6 +41,8 @@ public class Generator : MonoBehaviour
                 Tile tile = (Tile)go.AddComponent(typeof(Tile));
                 _tilemap[x, y] = tile;
             }
+        Destroy(prefab);
+
 
         ConnectTiles(_tilemap);
 
@@ -66,13 +68,17 @@ public class Generator : MonoBehaviour
     private void CreateBack ()
     {
         Vector3 cameraPos = Camera.main.transform.position;
+        GameObject prefab = new GameObject("BGLayer");
+        
+        GameObject BGParent = new GameObject("BG");
 
         for (int i = 0; i < Layer.BGLayersCount; i++)
         {
             float z = (cameraPos.z + Camera.main.farClipPlane) * Layer.BGDistances[i];
-            GameObject prefab = new GameObject("BGLayer");
+
             GameObject bglayer = Instantiate(prefab, new Vector3(cameraPos.x, cameraPos.y, z), Quaternion.identity);
             bglayer.transform.localScale = new Vector3(map.width, map.width, 1);
+            bglayer.transform.SetParent(BGParent.transform);
 
             SpriteRenderer renderer = bglayer.AddComponent<SpriteRenderer>();
             renderer.sprite = Layer.BGLayers[i];
@@ -82,6 +88,8 @@ public class Generator : MonoBehaviour
             Paralax paralax = bglayer.AddComponent<Paralax>();
             paralax.ParalaxFactor = Layer.BGDistances[i];
         }
+
+        Destroy(prefab);
     }
 
     private void GenGeos (int seed)
