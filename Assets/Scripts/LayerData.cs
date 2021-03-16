@@ -10,6 +10,7 @@ public class LayerData : ScriptableObject
     public Sprite[] BGLayers;
     [Range(-1f, 1f)]
     public float[] BGDistances;
+    public int BGSize;
 
     public float XRepeating;
     public float YRepeating;

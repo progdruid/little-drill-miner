@@ -77,7 +77,7 @@ public class Generator : MonoBehaviour
             float z = (cameraPos.z + Camera.main.farClipPlane) * Layer.BGDistances[i];
 
             GameObject bglayer = Instantiate(prefab, new Vector3(cameraPos.x, cameraPos.y, z), Quaternion.identity);
-            bglayer.transform.localScale = new Vector3(map.width, map.width, 1);
+            bglayer.transform.localScale = new Vector3(Layer.BGSize, Layer.BGSize, 1);
             bglayer.transform.SetParent(BGParent.transform);
 
             SpriteRenderer renderer = bglayer.AddComponent<SpriteRenderer>();

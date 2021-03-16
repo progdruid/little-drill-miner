@@ -27,6 +27,7 @@ MonoBehaviour:
   - 0.6666
   - 0.8333
   - 1
+  BGSize: 128
   XRepeating: 3
   YRepeating: 0.5625
-  EntryGeo: {fileID: 11400000, guid: e77afe366f4bbfb4da2b7ae4956f8b52, type: 2}
+  EntryGeo: {fileID: 11400000, guid: 2fdf7644dbe718a4394807f8075b0278, type: 2}

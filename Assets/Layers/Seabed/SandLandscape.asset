@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd50ad9d75399a4aa3afd70e5b432a5, type: 3}
+  m_Name: SandLandscape
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: ef8fb47117445d5458b65a7c13b988b7, type: 2}
+  landscapeNoise: 0
+  minpower: 0
+  maxpower: 1
+  minHeightPercent: 0.1
+  maxHeightPercent: 0.2
