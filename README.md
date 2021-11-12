@@ -1,2 +1,1 @@
-ProjectLDM
-git remote add origin https://github.com/Icekkile/NewLDM.git
+Little Drill Miner - is a procedural generation project. 
